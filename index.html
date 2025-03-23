@@ -63,6 +63,9 @@
             /* width:35%; */
             /* height:80%; */
             grid-area:aside;
+            background-color:rgba(255, 108, 108, 0.305);
+            border-radius:5px;
+            padding:2mm;
         }
         aside .heading{
             text-transform:uppercase;
@@ -97,19 +100,15 @@
             font-size: small;
             text-indent:10mm;
         }
-        #EduBlock > ul > li{
-            margin-left:10mm;
-            font-weight:700;
-            /* list-style:none; */
+        /* Main list styling */
+        #EduBlock ul {
+            /* list-style-type:symbols("i"); */
+            margin-left: 5mm;
         }
-        #EduBlock > ul > li > ul > li{
-            margin-left:30mm;
-            color:red;
-            /* padding-left:10mm; */
+        #EduBlock ul ul {
+            list-style-type: circle; /* Nested list में हल्के बुलेट */
         }
-        #EduBlock li::before{
-            /* content: "➡"; */
-        }
+       
         #OthExpBlock li{
             margin-left:10mm;
         }
@@ -118,6 +117,11 @@
         }
         #ProjectBlock p{
             font-size:small;
+        }
+        #conBlock > div{
+            background-color:rgba(255, 114, 114, 0.25);
+            margin-top:5mm;
+            padding:2mm;
         }
         /* Content Block Styling End */
         .flexMe{
