@@ -33,8 +33,8 @@
         }
         #page{
             display:grid;
-            grid-template-columns: 30% 60%;
-            grid-template-rows: 10% 85%;
+            grid-template-columns: 30% auto;
+            grid-template-rows: 10% auto;
             grid-template-areas: "header header"
                                  "aside conBlock";
             gap:1%;
@@ -48,7 +48,9 @@
             flex-direction:column;
             gap:3mm;
             grid-area:header;
+            background-color:rgba(255, 192, 203, 0.312);
         }
+        
         #name{
             font-size:13mm;
             text-transform: uppercase;
@@ -71,16 +73,26 @@
             text-transform:uppercase;
             margin-top:2%;
         }
-        #infoBlock ul{
+        aside ul{
             list-style:none;
         }
-        #infoBlock ul li{
+        aside ul li{
             background-image: url("./Files/cv.png");
             background-size: 15px 15px;
             background-repeat: no-repeat;
             background-position: left center;
             padding-left: 20px;;
             text-transform: capitalize;
+        }
+        #personalInfoBlock ul{
+            background-color: rgba(255, 135, 155, 0.435);
+            padding:2%;
+        }
+        #skillInfoBlock ul>ul{
+            margin-left:5mm;
+        }
+        aside div{
+            margin-top:2%;
         }
         /* Sidebar styling End */
 
@@ -122,12 +134,19 @@
             background-color:rgba(255, 114, 114, 0.25);
             margin-top:5mm;
             padding:2mm;
+            border-radius: 5px;
+        }
+        #conBlock{
+            background-color: rgba(0, 128, 0, 0.291);
         }
         /* Content Block Styling End */
         .flexMe{
             display:flex;
             justify-content:center;
             align-items:center;
+        }
+        .listTitle{
+            font-weight: 800;
         }
     </style>
 </head>
@@ -138,37 +157,49 @@
             <p id="status">Fresher</p>
         </header>
         <aside id="infoBlock">
-            <ul>
-                <li><a href="">Nehru Vihar, delhi</a></li>
-                <li><a href="">+91-7210552015</a></li>
-                <li><a href="raaz2507@gmail.com">raaz2507@gmail.com</a></li>
-                <li><a href="github.com">@raaz2505</a></li>
-                <li><a href="linkding.com">@raj-aggrawal-0021b7286</a></li>
-            </ul>
-            <h4 class="heading">skills/Languages</h4>
-            <ul>
-                <li>Software Dovelopment</li>
-                <li></li>
-                <li>C</li>
-                <li>python</li>
-                <li>HTML, CSS, JavaScript(vanila)</li>
-                <li>SQL</li>
-            </ul>
-            <h4 class="heading">INTRESTS</h4>
-            <ul>
-                <li>Drawing, gym, Boxing, book reading</li>
-                <li>Problum-solving</li>
-            </ul>
-            <h4 class="heading">strengths</h4>
-            <ul>
-                <li>Fast Learner</li>
-                <li>Attention to Detail</li>
-                <li>Stong Analiytical Thinking</li>
-            </ul>
-            <h4 class="heading">Achivements</h4>
-            <ul>
-                <li>competion cetificate in drawing</li>
-            </ul>
+            <div id="personalInfoBlock">
+                <ul>
+                    <li><a href="">Nehru Vihar, delhi</a></li>
+                    <li><a href="">+91-7210552015</a></li>
+                    <li><a href="raaz2507@gmail.com">raaz2507@gmail.com</a></li>
+                    <li><a href="github.com">@raaz2505</a></li>
+                    <li><a href="linkding.com">@raj-aggrawal-0021b7286</a></li>
+                </ul>
+            </div>
+            <div id="skillInfoBlock">
+                <h4 class="heading">skills/Languages</h4>
+                <ul>
+                    <li><h5>Language</h5></li>
+                    <ul>
+                        <li>C</li>
+                        <li>python</li>
+                        <li>HTML, CSS, JavaScript(vanila)</li>    
+                    </ul>
+                    <li><h5>Database</h5></li>
+                    <ul>
+                        <li>SQL</li>
+                    </ul>
+                </ul>
+            </div>
+            <div id="intrestBlock">
+                <h4 class="heading">INTRESTS</h4>
+                <ul>
+                    <li>Drawing, gym, Boxing, book reading</li>
+                    <li>Problum-solving</li>
+                </ul>
+                <h4 class="heading">strengths</h4>
+                <ul>
+                    <li>Fast Learner</li>
+                    <li>Attention to Detail</li>
+                    <li>Stong Analiytical Thinking</li>
+                </ul>
+            </div>
+            <div id="achivementBlock">
+                <h4 class="heading">Achivements</h4>
+                <ul>
+                    <li>competion cetificate in drawing</li>
+                </ul>
+            </div>
         </aside>
         <div id="conBlock">
             <div id="profileBlock">
