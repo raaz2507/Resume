@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="icon" type="image/png" href="./Files/cv.png">
+    <style>
+        :root{
+            --a4width:209mm;
+            --a4height:295mm;
+        }
+        html, body{
+            width:100vw;
+            height:100vh;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            /* border: 2px  solid red; */
+        }
+        body{
+            background-color:rgb(255, 228, 196);
+        }
+        #page{
+            width: var(--a4width);
+            height: var(--a4height);
+            box-shadow: 1px 1px 13px 1px rgb(172, 153, 131);
+            margin: 2% auto;
+            padding:5mm;
+            border-radius: 15px;
+        }
+        #page{
+            display:grid;
+            grid-template-columns: 30% 60%;
+            grid-template-rows: 10% 85%;
+            grid-template-areas: "header header"
+                                 "aside conBlock";
+            gap:1%;
+        }
+        /* header Styling start */
+        header{
+            /* width:100%; */
+            /* height:20%; */
+            /* border: 2px  solid red; */
+            /* flexSetting */
+            flex-direction:column;
+            gap:3mm;
+            grid-area:header;
+        }
+        #name{
+            font-size:13mm;
+            text-transform: uppercase;
+        }
+        #status{
+            font-size:8mm;
+            text-transform: uppercase;
+        }
+        /* header Styling end */
+        /* sidebar styling Start */
+        aside{
+            /* width:35%; */
+            /* height:80%; */
+            grid-area:aside;
+        }
+        aside .heading{
+            text-transform:uppercase;
+            margin-top:2%;
+        }
+        #infoBlock ul{
+            list-style:none;
+        }
+        #infoBlock ul li{
+            background-image: url("./Files/cv.png");
+            background-size: 15px 15px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 20px;;
+            text-transform: capitalize;
+        }
+        /* Sidebar styling End */
+
+        /* contant Block Styling Start */
+        #conBlock{
+            /* width:60%; */
+            /* height:70%; */
+            grid-area:conBlock;
+            padding:1%;
+        }
+        #conBlock .heading{
+            text-transform:uppercase;
+            margin-top:2%;
+        }
+        #profileBlock p{
+            text-align:justify;
+            font-size: small;
+            text-indent:10mm;
+        }
+        #EduBlock > ul > li{
+            margin-left:10mm;
+            font-weight:700;
+            /* list-style:none; */
+        }
+        #EduBlock > ul > li > ul > li{
+            margin-left:30mm;
+            color:red;
+            /* padding-left:10mm; */
+        }
+        #EduBlock li::before{
+            /* content: "➡"; */
+        }
+        #OthExpBlock li{
+            margin-left:10mm;
+        }
+        #ProjectBlock .projectTitle, #ProjectBlock p{
+            display:inline;
+        }
+        #ProjectBlock p{
+            font-size:small;
+        }
+        /* Content Block Styling End */
+        .flexMe{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <header class="flexMe">
+            <p id="name">Raj kamal Aggrawal</p>
+            <p id="status">Fresher</p>
+        </header>
+        <aside id="infoBlock">
+            <ul>
+                <li><a href="">Nehru Vihar, delhi</a></li>
+                <li><a href="">+91-7210552015</a></li>
+                <li><a href="raaz2507@gmail.com">raaz2507@gmail.com</a></li>
+                <li><a href="github.com">@raaz2505</a></li>
+                <li><a href="linkding.com">@raj-aggrawal-0021b7286</a></li>
+            </ul>
+            <h4 class="heading">skills/Languages</h4>
+            <ul>
+                <li>Software Dovelopment</li>
+                <li></li>
+                <li>C</li>
+                <li>python</li>
+                <li>HTML, CSS, JavaScript(vanila)</li>
+                <li>SQL</li>
+            </ul>
+            <h4 class="heading">INTRESTS</h4>
+            <ul>
+                <li>Drawing, gym, Boxing, book reading</li>
+                <li>Problum-solving</li>
+            </ul>
+            <h4 class="heading">strengths</h4>
+            <ul>
+                <li>Fast Learner</li>
+                <li>Attention to Detail</li>
+                <li>Stong Analiytical Thinking</li>
+            </ul>
+            <h4 class="heading">Achivements</h4>
+            <ul>
+                <li>competion cetificate in drawing</li>
+            </ul>
+        </aside>
+        <div id="conBlock">
+            <div id="profileBlock">
+                <h3 class="heading">profile</h3>
+                <p>I have a strong passion for electronics and programming, with a deep curiosity about how technology works and influences our lives. My eagerness to learn and understand complex systems drives me to continuously improve my skills. I am confident that my enthusiasm and dedication make me a valuable asset to any team, as I am always ready to tackle challenges, share insights, and contribute to innovative solutions.</p>
+            </div>
+            <div id="EduBlock">
+                <h3 class="heading">Education</h3>
+                <ul>
+                    <li>B.A.(Poltical Sci. Hons)[Delhi University]</li>
+                    <li>Office Assisant (Microsoft Office)</li>
+                        <ul><li>Learnt Advance Microsoft Office</li></ul>
+                    <li>Diploma: Post-Graduate Diploma in Computer Application (PGDCA) |  IGNOU</li>
+                        <ul>
+                            <li>Learnt C,Python and Java Language</li>
+                            <li>Strongly Learnt SQL, DBMS, Operating System</li>
+                        </ul>
+                </ul>
+            </div>
+            <div id="OthExpBlock">
+                <h3 class="heading">Other Experience</h3>
+                <ul>
+                    <li>Adobe Photoshop</li>
+                    <li>Strong Computer Bardware Knolage</li>
+                </ul>
+            </div>
+            <div id="ProjectBlock">
+                <h4 class="heading">projects</h4>
+                <h5 class="projectTitle">English2Hindi-Transliteration:</h5>
+                <p> Built a responsive English to Hindi Transliteration Web App using HTML, CSS, and JavaScript. Added features like text conversion, copy-paste, font resizing, and JSON-based word storage for better user experience. <a href=""> [ProJect Link]</a></p>
+                <br>
+                <h5 class="projectTitle">अंक ज्योतिष कैलकुलेटर :</h5>    
+                <p>This project is a Numerology Calculator that calculates the Name Number (नामांक), Birth Number (मूलांक), and Destiny Number (भाग्यांक) based on the user's name and date of birth. <a href="">[Project Link]</a></p>
+                <br>
+                <h5 class="projectTitle">Custom Input Handler in Java:</h5>    
+                <p>This project aims to create a custom input handling system for various data types (strings, integers, floats, etc.) in Java, providing methods for reading and processing user input from the console  for solving problem of buffer input. <a href="">[ Project Link ]</a></p>
+                <br>
+                <h5 class="projectTitle">#1600 Year Calendar in OOP:</h5>    
+                <p>Developed a Python calendar system supporting 1600 years, featuring leap year calculations, date validation, and custom exceptions for invalid inputs.Utilized flexible input handling for numerical and textual month names, and calculated the day of the week for any date,all within an object-oriented framework. <a href="">[ Project Link ]</a></p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
