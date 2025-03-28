@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="icon" type="image/png" href="./Files/cv.png">
+    <link rel="stylesheet" href="style.css">
     <style>
         :root{
             --a4width:209mm;
@@ -71,26 +72,94 @@
         }
         aside .heading{
             text-transform:uppercase;
-            margin-top:2%;
+            margin-top:1%;
         }
         aside ul{
-            list-style:none;
+            list-style-type:none;
+            list-style-image: url("./Files/doc.svg");
         }
-        aside ul li{
-            background-image: url("./Files/cv.png");
-            background-size: 15px 15px;
+        aside li{
             background-repeat: no-repeat;
-            background-position: left center;
-            padding-left: 20px;;
+            background-position: left top;
+            padding-left: 5mm; 
             text-transform: capitalize;
+        }
+        aside div{
+            margin-bottom:5mm;
+        }
+        aside #qrBlock{
+            width:40mm;
+            height:40mm;
+            background-image: url('./Files/resuemQR.svg');
+            background-size:40mm ;
+            background-repeat: no-repeat;
+            margin:3mm auto;
         }
         #personalInfoBlock ul{
             background-color: rgba(255, 135, 155, 0.435);
             padding:2%;
+            margin-bottom: 2mm;
+        }
+        #personalInfoBlock #address {
+            /* list-style-image: url('./Files/location-arrow.svg'); */
+            background-image: url('./Files/location-arrow.svg');
+        }
+        #personalInfoBlock #phNum {
+            background-image: url('./Files/phone.svg');
+        }
+        #personalInfoBlock #Email{
+            background-image: url('./Files/email.svg');
+        }
+        #personalInfoBlock #github{
+            background-image: url('./Files/github.svg');
+        }
+        #personalInfoBlock #linkdin{
+            background-image: url('./Files/linkdin.svg');
+        }
+        #personalInfoBlock li{
+            padding-left:5mm;
+    
         }
         #skillInfoBlock ul>ul{
             margin-left:5mm;
         }
+        #skillInfoBlock #language li{
+            background-image: url('./Files/code.svg');
+            padding-left:7mm;
+            background-size:5mm;
+        }
+        #skillInfoBlock #database li{
+            background-image: url('./Files/database.svg');
+            padding-left:7mm;
+            background-size:4mm;
+        }
+        #intrestBlock ul li{
+            /* list-style-image: url('./Files/bookmark.svg') */
+            
+        }
+        #intrestBlock ul li{
+            margin-top:3mm;
+            background-image: url('./Files/bookmark.svg');
+            background-size: 3mm;
+            padding-left:5mm;
+        }
+        #strengthBlock ul{
+            /* list-style-image: url('./Files/dumbbell.svg'); */
+        }
+        #strengthBlock li{
+            background-image: url('./Files/dumbbell.svg');
+            background-size:5mm;
+            padding-left:7mm;
+            background-position:left center;
+            margin-top:2mm;
+        }
+        #achivementBlock ul li{
+            background-image: url("./Files/trophy.svg");
+            background-size: 5mm;
+            background-position: left top;
+            padding-left:7mm;
+
+        }   
         aside div{
             margin-top:2%;
         }
@@ -116,19 +185,42 @@
         #EduBlock ul {
             /* list-style-type:symbols("i"); */
             margin-left: 5mm;
+            list-style-type:none;
         }
         #EduBlock ul ul {
-            list-style-type: circle; /* Nested list में हल्के बुलेट */
+            /* list-style-type: circle; Nested list में हल्के बुलेट */
         }
-       
+        #EduBlock li{
+            background-image: url('./Files/graduationCap.svg');
+            background-repeat:no-repeat;
+            background-size: 5mm;
+            padding-left: 6mm;
+            margin-top:2mm;
+        }
         #OthExpBlock li{
             margin-left:10mm;
         }
-        #ProjectBlock .projectTitle, #ProjectBlock p{
-            display:inline;
+        #ProjectBlock .projectTitle{
+            font-weight:bold;
+            font-size:16px;
         }
         #ProjectBlock p{
             font-size:small;
+        }
+        #ProjectBlock ul{
+            list-style-type:none;
+            /* list-style-image: url('./Files/check.svg') */
+        }
+        #ProjectBlock ul li{
+            margin-top:2%;
+            margin-left:3mm;
+        }
+        #ProjectBlock ul li{
+            background-image: url("./Files/folder_open.svg");
+            background-repeat: no-repeat;
+            background-size: 5mm;
+            background-position: left top;
+            padding-left:7mm;
         }
         #conBlock > div{
             background-color:rgba(255, 114, 114, 0.25);
@@ -148,6 +240,12 @@
         .listTitle{
             font-weight: 800;
         }
+        .listSyleSetting{
+            list-style-type:none;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size:5mm;
+        }
     </style>
 </head>
 <body>
@@ -157,12 +255,23 @@
             <p id="status">Fresher</p>
         </header>
         <aside id="infoBlock">
+            <div id="qrBlock">
+                
+            </div>
             <div id="personalInfoBlock">
-                <ul>
-                    <li><a href="">Nehru Vihar, delhi</a></li>
+                <ul id="address" class="listSyleSetting">
+                    <li ><a href="">Nehru Vihar, delhi</a></li>
+                </ul>
+                <ul id="phNum" class="listSyleSetting">
                     <li><a href="">+91-7210552015</a></li>
+                </ul>
+                <ul id="Email" class="listSyleSetting">
                     <li><a href="raaz2507@gmail.com">raaz2507@gmail.com</a></li>
+                </ul>
+                <ul id="github" class="listSyleSetting">
                     <li><a href="github.com">@raaz2505</a></li>
+                </ul>
+                <ul id="linkdin" class="listSyleSetting">
                     <li><a href="linkding.com">@raj-aggrawal-0021b7286</a></li>
                 </ul>
             </div>
@@ -170,13 +279,13 @@
                 <h4 class="heading">skills/Languages</h4>
                 <ul>
                     <li><h5>Language</h5></li>
-                    <ul>
+                    <ul id="language">
                         <li>C</li>
                         <li>python</li>
                         <li>HTML, CSS, JavaScript(vanila)</li>    
                     </ul>
                     <li><h5>Database</h5></li>
-                    <ul>
+                    <ul id="database">
                         <li>SQL</li>
                     </ul>
                 </ul>
@@ -187,8 +296,10 @@
                     <li>Drawing, gym, Boxing, book reading</li>
                     <li>Problum-solving</li>
                 </ul>
+            </div>
+            <div id="strengthBlock">
                 <h4 class="heading">strengths</h4>
-                <ul>
+                <ul class="listSyleSetting">
                     <li>Fast Learner</li>
                     <li>Attention to Detail</li>
                     <li>Stong Analiytical Thinking</li>
@@ -228,19 +339,21 @@
             </div>
             <div id="ProjectBlock">
                 <h4 class="heading">projects</h4>
-                <h5 class="projectTitle">English2Hindi-Transliteration:</h5>
-                <p> Built a responsive English to Hindi Transliteration Web App using HTML, CSS, and JavaScript. Added features like text conversion, copy-paste, font resizing, and JSON-based word storage for better user experience. <a href=""> [ProJect Link]</a></p>
-                <br>
-                <h5 class="projectTitle">अंक ज्योतिष कैलकुलेटर :</h5>    
-                <p>This project is a Numerology Calculator that calculates the Name Number (नामांक), Birth Number (मूलांक), and Destiny Number (भाग्यांक) based on the user's name and date of birth. <a href="">[Project Link]</a></p>
-                <br>
-                <h5 class="projectTitle">Custom Input Handler in Java:</h5>    
-                <p>This project aims to create a custom input handling system for various data types (strings, integers, floats, etc.) in Java, providing methods for reading and processing user input from the console  for solving problem of buffer input. <a href="">[ Project Link ]</a></p>
-                <br>
-                <h5 class="projectTitle">#1600 Year Calendar in OOP:</h5>    
-                <p>Developed a Python calendar system supporting 1600 years, featuring leap year calculations, date validation, and custom exceptions for invalid inputs.Utilized flexible input handling for numerical and textual month names, and calculated the day of the week for any date,all within an object-oriented framework. <a href="">[ Project Link ]</a></p>
+                <ul>
+                    <li>
+                        <p><span class="projectTitle">English2Hindi-Transliteration:</span> Built a responsive English to Hindi Transliteration Web App using HTML, CSS, and JavaScript. Added features like text conversion, copy-paste, font resizing, and JSON-based word storage for better user experience. <a href=""> [ProJect Link]</a></p>
+                    </li>
+                    <li> 
+                        <p><span class="projectTitle">अंक ज्योतिष कैलकुलेटर :</span> This project is a Numerology Calculator that calculates the Name Number (नामांक), Birth Number (मूलांक), and Destiny Number (भाग्यांक) based on the user's name and date of birth. <a href="">[Project Link]</a></p>
+                    </li>
+                    <li>
+                        <p><span class="projectTitle">Custom Input Handler in Java:</span> This project aims to create a custom input handling system for various data types (strings, integers, floats, etc.) in Java, providing methods for reading and processing user input from the console  for solving problem of buffer input. <a href="">[ Project Link ]</a></p>
+                    </li>
+                    <li>
+                        <p><span class="projectTitle">#1600 Year Calendar in OOP:</span> Developed a Python calendar system supporting 1600 years, featuring leap year calculations, date validation, and custom exceptions for invalid inputs.Utilized flexible input handling for numerical and textual month names, and calculated the day of the week for any date,all within an object-oriented framework. <a href="">[ Project Link ]</a></p>
+                    </li>
+                </ul>
             </div>
-            
         </div>
     </div>
 </body>
