@@ -1,0 +1,245 @@
+:root{
+    --a4width:209mm;
+    --a4height:295mm;
+}
+html, body{
+    width:100vw;
+    height:100vh;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* border: 2px  solid red; */
+}
+body{
+    background-color:rgb(255, 228, 196);
+}
+#page{
+    width: var(--a4width);
+    height: var(--a4height);
+    box-shadow: 1px 1px 13px 1px rgb(172, 153, 131);
+    margin: 2% auto;
+    padding:5mm;
+    border-radius: 15px;
+}
+#page{
+    display:grid;
+    grid-template-columns: 35% auto;
+    grid-template-rows: 10% auto;
+    grid-template-areas: "header header"
+                         "aside conBlock";
+    gap:1%;
+}
+/* header Styling start */
+header{
+    /* width:100%; */
+    /* height:20%; */
+    /* border: 2px  solid red; */
+    /* flexSetting */
+    flex-direction:column;
+    gap:3mm;
+    grid-area:header;
+    background-color:rgba(255, 192, 203, 0.312);
+}
+
+#name{
+    font-size:13mm;
+    text-transform: uppercase;
+}
+#status{
+    font-size:8mm;
+    text-transform: uppercase;
+}
+/* header Styling end */
+/* sidebar styling Start */
+aside{
+    /* width:35%; */
+    /* height:80%; */
+    grid-area:aside;
+    background-color:rgba(255, 108, 108, 0.274);
+    border-radius:5px;
+    padding:5mm;
+}
+aside .heading{
+    text-transform:uppercase;
+    margin-top:1%;
+}
+aside ul{
+    list-style-type:none;
+    list-style-image: url("./Files/doc.svg");
+}
+aside li{
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 5mm; 
+    text-transform: capitalize;
+}
+aside div{
+    margin-bottom:5mm;
+}
+aside #qrBlock{
+    width:40mm;
+    height:40mm;
+    background-image: url('./Files/resuemQR.svg');
+    background-size:40mm ;
+    background-repeat: no-repeat;
+    margin:3mm auto;
+}
+#personalInfoBlock ul{
+    /* background-color: rgb(255, 135, 155); */
+    padding:2%;
+    margin-bottom: 2mm;
+}
+#personalInfoBlock a{
+    text-decoration: none;
+}
+#personalInfoBlock #address {
+    /* list-style-image: url('./Files/location-arrow.svg'); */
+    background-image: url('./Files/location-arrow.svg');
+}
+#personalInfoBlock #phNum {
+    background-image: url('./Files/phone.svg');
+}
+#personalInfoBlock #Email{
+    background-image: url('./Files/email.svg');
+}
+#personalInfoBlock #github{
+    background-image: url('./Files/github.svg');
+}
+#personalInfoBlock #linkdin{
+    background-image: url('./Files/linkdin.svg');
+}
+#personalInfoBlock li{
+    padding-left:5mm;
+
+}
+#skillInfoBlock ul>ul{
+    margin-left:5mm;
+}
+#skillInfoBlock #language li{
+    background-image: url('./Files/code.svg');
+    padding-left:7mm;
+    background-size:5mm;
+}
+#skillInfoBlock #database li{
+    background-image: url('./Files/database.svg');
+    padding-left:7mm;
+    background-size:4mm;
+}
+#intrestBlock ul li{
+    /* list-style-image: url('./Files/bookmark.svg') */
+}
+
+#intrestBlock ul li{
+    margin-top:3mm;
+    background-image: url('./Files/bookmark.svg');
+    background-size: 3mm;
+    padding-left:5mm;
+}
+#strengthBlock ul{
+    /* list-style-image: url('./Files/dumbbell.svg'); */
+}
+#strengthBlock li{
+    background-image: url('./Files/dumbbell.svg');
+    background-size:5mm;
+    padding-left:7mm;
+    background-position:left center;
+    margin-top:2mm;
+}
+#achivementBlock ul li{
+    background-image: url("./Files/trophy.svg");
+    background-size: 5mm;
+    background-position: left top;
+    padding-left:7mm;
+
+}   
+aside div{
+    margin-top:2%;
+}
+/* Sidebar styling End */
+
+/* contant Block Styling Start */
+#conBlock{
+    /* width:60%; */
+    /* height:70%; */
+    grid-area:conBlock;
+    padding:1%;
+}
+#conBlock .heading{
+    text-transform:uppercase;
+    margin-bottom:2mm;
+    margin-top:1mm;
+}
+#profileBlock p{
+    text-align:justify;
+    font-size: small;
+    text-indent:10mm;
+}
+/* Main list styling */
+#EduBlock ul {
+    /* list-style-type:symbols("i"); */
+    margin-left: 5mm;
+    list-style-type:none;
+}
+#EduBlock ul ul {
+    /* list-style-type: circle; Nested list में हल्के बुलेट */
+}
+#EduBlock li{
+    background-image: url('./Files/graduationCap.svg');
+    background-repeat:no-repeat;
+    background-size: 5mm;
+    padding-left: 6mm;
+    margin-bottom:2mm;
+}
+#OthExpBlock li{
+    margin-left:10mm;
+}
+#ProjectBlock .projectTitle{
+    font-weight:bold;
+    font-size:16px;
+}
+#ProjectBlock p{
+    font-size:small;
+    text-align: justify;
+}
+#ProjectBlock ul{
+    list-style-type:none;
+    /* list-style-image: url('./Files/check.svg') */
+}
+#ProjectBlock ul li{
+    margin-top:2%;
+    margin-left:3mm;
+}
+#ProjectBlock ul li{
+    background-image: url("./Files/folder_open.svg");
+    background-repeat: no-repeat;
+    background-size: 5mm;
+    background-position: left top;
+    padding-left:7mm;
+}
+#conBlock > div{
+    /* background-color:rgba(255, 114, 114, 0.25); */
+    /* box-shadow: 1px 1px 3px 2px rgba(255, 114, 114, 0.144); */
+    margin-bottom:2mm;
+    padding:2mm;
+    border-radius: 5px;
+}
+#conBlock{
+    background-color: rgba(0, 128, 0, 0.291);
+}
+/* Content Block Styling End */
+.flexMe{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.listTitle{
+    font-weight: 800;
+}
+.listSyleSetting{
+    list-style-type:none;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size:5mm;
+}
