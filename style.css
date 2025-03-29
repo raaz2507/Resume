@@ -1,3 +1,4 @@
+
 :root{
     --a4width:209mm;
     --a4height:295mm;
@@ -15,6 +16,7 @@ html, body{
 body{
     background-color:rgb(255, 228, 196);
 }
+
 #page{
     width: var(--a4width);
     height: var(--a4height);
@@ -59,7 +61,7 @@ aside{
     grid-area:aside;
     background-color:rgba(255, 108, 108, 0.274);
     border-radius:5px;
-    padding:5mm;
+    padding: 1mm 0 0 3mm;
 }
 aside .heading{
     text-transform:uppercase;
@@ -67,7 +69,7 @@ aside .heading{
 }
 aside ul{
     list-style-type:none;
-    list-style-image: url("./Files/doc.svg");
+    list-style-image: url("./Files/doc.svg") !important;
 }
 aside li{
     background-repeat: no-repeat;
@@ -76,55 +78,60 @@ aside li{
     text-transform: capitalize;
 }
 aside div{
-    margin-bottom:5mm;
+    margin-bottom:3mm;
 }
 aside #qrBlock{
     width:40mm;
     height:40mm;
-    background-image: url('./Files/resuemQR.svg');
+    background-image: url('./Files/resuemQR.svg') !important;
     background-size:40mm ;
     background-repeat: no-repeat;
     margin:3mm auto;
 }
-#personalInfoBlock ul{
+#ContactInfoBlock ul{
     /* background-color: rgb(255, 135, 155); */
-    padding:2%;
+    padding:1mm;
     margin-bottom: 2mm;
 }
-#personalInfoBlock a{
+#ContactInfoBlock a{
     text-decoration: none;
 }
-#personalInfoBlock #address {
+#ContactInfoBlock #address {
     /* list-style-image: url('./Files/location-arrow.svg'); */
     background-image: url('./Files/location-arrow.svg');
 }
-#personalInfoBlock #phNum {
+#ContactInfoBlock #phNum {
     background-image: url('./Files/phone.svg');
 }
-#personalInfoBlock #Email{
+#ContactInfoBlock #Email{
     background-image: url('./Files/email.svg');
 }
-#personalInfoBlock #github{
+#ContactInfoBlock #github{
     background-image: url('./Files/github.svg');
 }
-#personalInfoBlock #linkdin{
+#ContactInfoBlock #linkdin{
     background-image: url('./Files/linkdin.svg');
 }
-#personalInfoBlock li{
+#ContactInfoBlock li{
     padding-left:5mm;
 
 }
 #skillInfoBlock ul>ul{
     margin-left:5mm;
 }
+#skillInfoBlock li{
+    margin-bottom:1mm;
+    padding-left:7mm;
+}
+#skillInfoBlock ul{
+    margin-top:1mm;
+}
 #skillInfoBlock #language li{
     background-image: url('./Files/code.svg');
-    padding-left:7mm;
     background-size:5mm;
 }
 #skillInfoBlock #database li{
     background-image: url('./Files/database.svg');
-    padding-left:7mm;
     background-size:4mm;
 }
 #intrestBlock ul li{
@@ -152,8 +159,10 @@ aside #qrBlock{
     background-size: 5mm;
     background-position: left top;
     padding-left:7mm;
-
-}   
+} 
+#otherInfoBlock .title{
+    font-weight:600;
+}
 aside div{
     margin-top:2%;
 }
@@ -218,6 +227,9 @@ aside div{
     background-position: left top;
     padding-left:7mm;
 }
+#ProjectBlock a{
+    text-decoration:solid;
+}
 #conBlock > div{
     /* background-color:rgba(255, 114, 114, 0.25); */
     /* box-shadow: 1px 1px 3px 2px rgba(255, 114, 114, 0.144); */
@@ -242,4 +254,14 @@ aside div{
     background-repeat: no-repeat;
     background-position: left center;
     background-size:5mm;
+}
+
+@media print {
+    #page {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    .no-print {
+        display: none; /* कुछ एलिमेंट्स को प्रिंट में हटा सकते हैं */
+    }
 }
