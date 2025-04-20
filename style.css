@@ -264,4 +264,7 @@ aside div{
     .no-print {
         display: none; /* कुछ एलिमेंट्स को प्रिंट में हटा सकते हैं */
     }
+    @page{
+        size: A4;
+    }
 }
