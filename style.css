@@ -1,12 +1,15 @@
-
 :root{
     --a4width:209mm;
     --a4height:295mm;
+    --title-font: serif;
+    --content-font: sans-serif;
 }
+
 html, body{
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:100%;
 }
+
 *{
     margin:0;
     padding:0;
@@ -21,17 +24,17 @@ body{
     width: var(--a4width);
     height: var(--a4height);
     box-shadow: 1px 1px 13px 1px rgb(172, 153, 131);
-    margin: 2% auto;
+    margin: 0mm auto;
     padding:5mm;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 #page{
     display:grid;
     grid-template-columns: 35% auto;
-    grid-template-rows: 10% auto;
+    grid-template-rows: 9% auto;
     grid-template-areas: "header header"
                          "aside conBlock";
-    gap:1%;
+    gap:2mm;
 }
 /* header Styling start */
 header{
@@ -39,19 +42,22 @@ header{
     /* height:20%; */
     /* border: 2px  solid red; */
     /* flexSetting */
-    flex-direction:column;
-    gap:3mm;
+    /* flex-direction:column; */
+    /* gap:3mm; */
+    text-align: center;
+    padding: 2mm 0;
     grid-area:header;
     background-color:rgba(255, 192, 203, 0.312);
 }
 
 #name{
-    font-size:13mm;
+    font-size:11mm;
     text-transform: uppercase;
 }
 #status{
-    font-size:8mm;
+    font-size:7mm;
     text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* header Styling end */
 /* sidebar styling Start */
@@ -61,24 +67,31 @@ aside{
     grid-area:aside;
     background-color:rgba(255, 108, 108, 0.274);
     border-radius:5px;
-    padding: 1mm 0 0 3mm;
+    padding: 3mm 6mm;
 }
 aside .heading{
     text-transform:uppercase;
-    margin-top:1%;
+    margin:1mm 0 1mm 0;
+    color: rgb(255, 68, 0);
 }
+
+aside .sub-heading{
+    font-weight: bold;
+    margin: 2mm 0 1mm 0;
+}
+
 aside ul{
     list-style-type:none;
-    list-style-image: url("./Files/doc.svg") !important;
+    /* list-style-image: url("./Files/doc.svg") !important; */
+    padding-left: 3mm;
 }
 aside li{
     background-repeat: no-repeat;
     background-position: left top;
-    padding-left: 5mm; 
     text-transform: capitalize;
 }
 aside div{
-    margin-bottom:3mm;
+    /* margin-bottom:3mm; */
 }
 aside #qrBlock{
     width:40mm;
@@ -88,10 +101,12 @@ aside #qrBlock{
     background-repeat: no-repeat;
     margin:3mm auto;
 }
+
 #ContactInfoBlock ul{
     /* background-color: rgb(255, 135, 155); */
-    padding:1mm;
-    margin-bottom: 2mm;
+    padding:0 5mm ;
+    margin: 2mm 0;
+    font-style: italic;
 }
 #ContactInfoBlock a{
     text-decoration: none;
@@ -116,16 +131,12 @@ aside #qrBlock{
     padding-left:5mm;
 
 }
-#skillInfoBlock ul>ul{
-    margin-left:5mm;
-}
-#skillInfoBlock li{
-    margin-bottom:1mm;
+
+#skillInfoBlock li>ul li{
     padding-left:7mm;
+    color:rgb(44, 66, 0);
 }
-#skillInfoBlock ul{
-    margin-top:1mm;
-}
+
 #skillInfoBlock #language li{
     background-image: url('./Files/code.svg');
     background-size:5mm;
@@ -164,7 +175,7 @@ aside #qrBlock{
     font-weight:600;
 }
 aside div{
-    margin-top:2%;
+    margin-top: 4mm;
 }
 /* Sidebar styling End */
 
@@ -173,27 +184,31 @@ aside div{
     /* width:60%; */
     /* height:70%; */
     grid-area:conBlock;
-    padding:1%;
+    padding:1mm 3mm;
 }
 #conBlock .heading{
     text-transform:uppercase;
-    margin-bottom:2mm;
-    margin-top:1mm;
+    margin:2mm 0 0mm 0;
 }
+
 #profileBlock p{
     text-align:justify;
     font-size: small;
     text-indent:10mm;
+    font-family: var(--content-font);
 }
+
 /* Main list styling */
 #EduBlock ul {
     /* list-style-type:symbols("i"); */
     margin-left: 5mm;
     list-style-type:none;
 }
+
 #EduBlock ul ul {
     /* list-style-type: circle; Nested list में हल्के बुलेट */
 }
+
 #EduBlock li{
     background-image: url('./Files/graduationCap.svg');
     background-repeat:no-repeat;
@@ -201,54 +216,66 @@ aside div{
     padding-left: 6mm;
     margin-bottom:2mm;
 }
+
 #OthExpBlock li{
     margin-left:10mm;
 }
+
 #ProjectBlock .projectTitle{
     font-weight:bold;
     font-size:16px;
+    font-family: var(--title-font);
 }
+
 #ProjectBlock p{
     font-size:small;
     text-align: justify;
+    font-family: var(--content-font);
 }
+
 #ProjectBlock ul{
     list-style-type:none;
     /* list-style-image: url('./Files/check.svg') */
 }
-#ProjectBlock ul li{
-    margin-top:2%;
-    margin-left:3mm;
-}
+
 #ProjectBlock ul li{
     background-image: url("./Files/folder_open.svg");
     background-repeat: no-repeat;
     background-size: 5mm;
-    background-position: left top;
-    padding-left:7mm;
+    /* background-position: left top; */
+    padding-left:7mm !important;
+    margin: 1mm 0 0 3mm;
+    padding: 1mm;
+    background-color: rgba(255, 255, 255, 0.192);
 }
+
 #ProjectBlock a{
     text-decoration:solid;
 }
+
 #conBlock > div{
     /* background-color:rgba(255, 114, 114, 0.25); */
     /* box-shadow: 1px 1px 3px 2px rgba(255, 114, 114, 0.144); */
-    margin-bottom:2mm;
-    padding:2mm;
+    /* margin-bottom:2mm; */
+    padding:1mm 1mm;
     border-radius: 5px;
 }
+
 #conBlock{
     background-color: rgba(0, 128, 0, 0.291);
 }
+
 /* Content Block Styling End */
 .flexMe{
     display:flex;
     justify-content:center;
     align-items:center;
 }
+
 .listTitle{
     font-weight: 800;
 }
+
 .listSyleSetting{
     list-style-type:none;
     background-repeat: no-repeat;
