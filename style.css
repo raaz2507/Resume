@@ -67,17 +67,17 @@ aside{
     grid-area:aside;
     background-color:rgba(255, 108, 108, 0.274);
     border-radius:5px;
-    padding: 3mm 6mm;
+    padding: 1mm 2mm;
 }
 aside .heading{
     text-transform:uppercase;
-    margin:1mm 0 1mm 0;
+    margin:4mm 0 1mm 0;
     color: rgb(255, 68, 0);
 }
 
 aside .sub-heading{
-    font-weight: bold;
-    margin: 2mm 0 1mm 0;
+    font-weight: 700;
+    margin: 1mm 0 1mm 0;
 }
 
 aside ul{
@@ -91,7 +91,7 @@ aside li{
     text-transform: capitalize;
 }
 aside div{
-    /* margin-bottom:3mm; */
+    /* margin-bottom:0mm !important; */
 }
 aside #qrBlock{
     width:40mm;
@@ -99,99 +99,100 @@ aside #qrBlock{
     background-image: url('./Files/resuemQR.svg') !important;
     background-size:40mm ;
     background-repeat: no-repeat;
-    margin:3mm auto;
+    margin:1mm auto;
 }
 
-#ContactInfoBlock ul{
+aside #ContactInfoBlock ul{
     /* background-color: rgb(255, 135, 155); */
     padding:0 5mm ;
     margin: 2mm 0;
     font-style: italic;
 }
-#ContactInfoBlock a{
+aside #ContactInfoBlock a{
     text-decoration: none;
 }
-#ContactInfoBlock #address {
+aside #ContactInfoBlock #address {
     /* list-style-image: url('./Files/location-arrow.svg'); */
     background-image: url('./Files/location-arrow.svg');
 }
-#ContactInfoBlock #phNum {
+aside #ContactInfoBlock #phNum {
     background-image: url('./Files/phone.svg');
 }
-#ContactInfoBlock #Email{
+aside #ContactInfoBlock #Email{
     background-image: url('./Files/email.svg');
 }
-#ContactInfoBlock #github{
+aside #ContactInfoBlock #github{
     background-image: url('./Files/github.svg');
 }
-#ContactInfoBlock #linkdin{
+aside #ContactInfoBlock #linkdin{
     background-image: url('./Files/linkdin.svg');
 }
-#ContactInfoBlock li{
+aside #ContactInfoBlock li{
     padding-left:5mm;
 
 }
 
-#skillInfoBlock li>ul li{
+aside #skillInfoBlock li>ul li{
     padding-left:7mm;
     color:rgb(44, 66, 0);
 }
 
-#skillInfoBlock #language li{
-    background-image: url('./Files/code.svg');
-    background-size:5mm;
+aside #skillInfoBlock #language li{
+    /* background-image: url('./Files/code.svg'); */
+    /* background-size:5mm; */
 }
-#skillInfoBlock #database li{
-    background-image: url('./Files/database.svg');
-    background-size:4mm;
+aside #skillInfoBlock #database li{
+   
+    /* background-size:4mm; */
 }
-#intrestBlock ul li{
+aside #intrestBlock ul li{
     /* list-style-image: url('./Files/bookmark.svg') */
 }
 
-#intrestBlock ul li{
-    margin-top:3mm;
+aside #intrestBlock ul li{
+    /* margin-top:3mm; */
     background-image: url('./Files/bookmark.svg');
     background-size: 3mm;
     padding-left:5mm;
 }
-#strengthBlock ul{
+aside #strengthBlock ul{
     /* list-style-image: url('./Files/dumbbell.svg'); */
 }
-#strengthBlock li{
+aside #strengthBlock li{
     background-image: url('./Files/dumbbell.svg');
     background-size:5mm;
     padding-left:7mm;
     background-position:left center;
     margin-top:2mm;
 }
-#achivementBlock ul li{
+aside #achivementBlock ul li{
     background-image: url("./Files/trophy.svg");
     background-size: 5mm;
     background-position: left top;
     padding-left:7mm;
 } 
-#otherInfoBlock .title{
-    font-weight:600;
+aside #otherInfoBlock ul li{
+    margin: 1mm 0;
+   
 }
 aside div{
-    margin-top: 4mm;
+    margin: 1mm auto;
 }
 /* Sidebar styling End */
 
 /* contant Block Styling Start */
-#conBlock{
+main{
     /* width:60%; */
     /* height:70%; */
     grid-area:conBlock;
     padding:1mm 3mm;
 }
-#conBlock .heading{
+main .heading{
     text-transform:uppercase;
     margin:2mm 0 0mm 0;
 }
 
-#profileBlock p{
+main #profileBlock p{
     text-align:justify;
     font-size: small;
     text-indent:10mm;
@@ -199,17 +200,17 @@ aside div{
 }
 
 /* Main list styling */
-#EduBlock ul {
+main #EduBlock ul {
     /* list-style-type:symbols("i"); */
     margin-left: 5mm;
     list-style-type:none;
 }
 
-#EduBlock ul ul {
+main #EduBlock ul ul {
     /* list-style-type: circle; Nested list में हल्के बुलेट */
 }
 
-#EduBlock li{
+main #EduBlock li{
     background-image: url('./Files/graduationCap.svg');
     background-repeat:no-repeat;
     background-size: 5mm;
@@ -217,43 +218,44 @@ aside div{
     margin-bottom:2mm;
 }
 
-#OthExpBlock li{
+main #OthExpBlock li{
     margin-left:10mm;
 }
 
-#ProjectBlock .projectTitle{
+main #ProjectBlock .projectTitle{
     font-weight:bold;
     font-size:16px;
     font-family: var(--title-font);
 }
 
-#ProjectBlock p{
+main #ProjectBlock p{
     font-size:small;
     text-align: justify;
     font-family: var(--content-font);
 }
 
-#ProjectBlock ul{
-    list-style-type:none;
+main #ProjectBlock ul{
+    /* list-style-type:none; */
     /* list-style-image: url('./Files/check.svg') */
 }
 
-#ProjectBlock ul li{
+main #ProjectBlock ul li{
     background-image: url("./Files/folder_open.svg");
     background-repeat: no-repeat;
     background-size: 5mm;
-    /* background-position: left top; */
+    background-position: left top;
     padding-left:7mm !important;
-    margin: 1mm 0 0 3mm;
+    /* margin: 1mm 0 0 3mm; */
+    
     padding: 1mm;
     background-color: rgba(255, 255, 255, 0.192);
 }
 
-#ProjectBlock a{
+main #ProjectBlock a{
     text-decoration:solid;
 }
 
-#conBlock > div{
+main > div{
     /* background-color:rgba(255, 114, 114, 0.25); */
     /* box-shadow: 1px 1px 3px 2px rgba(255, 114, 114, 0.144); */
     /* margin-bottom:2mm; */
@@ -261,10 +263,60 @@ aside div{
     border-radius: 5px;
 }
 
-#conBlock{
+main{
     background-color: rgba(0, 128, 0, 0.291);
 }
 
+/* costom buttes start*/
+ul.custom-bullet {
+    list-style : none;
+    padding-left: 3mm;
+}
+
+ul.custom-bullet li{
+    position: relative;
+    padding-left: 25px;
+    margin:4px;
+}
+
+ul.custom-bullet li::before{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 7px;
+    width: 14px;
+    height:14px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* custom bullets end */
+/*constom icons*/
+.c-icon{
+    background-image: url('./Files/c.svg');
+}
+.python-icon {
+    background-image: url('./Files/python.svg');
+}
+
+.html-icon {
+    background-image: url('./Files/css3-alt.svg');
+}
+
+.js-icon{
+    background-image: url('./Files/js.svg');
+}
+
+.java-icon{
+    background-image: url('./Files/java.svg');
+}
+
+.sql-icon{
+     background-image: url('./Files/database.svg');
+ }
+.folder-icon{
+    background-image: url('./Files/folder_open.svg');
+}
 /* Content Block Styling End */
 .flexMe{
     display:flex;
