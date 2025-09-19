@@ -101,10 +101,13 @@ aside #qrBlock{
     background-repeat: no-repeat;
     margin:1mm auto;
 }
-
+aside #ContactInfoBlock{
+    padding-top: 2mm;
+    padding-left: 3mm;
+}
 aside #ContactInfoBlock ul{
     /* background-color: rgb(255, 135, 155); */
-    padding:0 5mm ;
+    padding:0 2mm ;
     margin: 2mm 0;
     font-style: italic;
 }
@@ -222,37 +225,19 @@ main #OthExpBlock li{
     margin-left:10mm;
 }
 
-main #ProjectBlock .projectTitle{
-    font-weight:bold;
-    font-size:16px;
-    font-family: var(--title-font);
-}
-
-main #ProjectBlock p{
-    font-size:small;
-    text-align: justify;
-    font-family: var(--content-font);
-}
-
-main #ProjectBlock ul{
-    /* list-style-type:none; */
-    /* list-style-image: url('./Files/check.svg') */
-}
-
-main #ProjectBlock ul li{
-    background-image: url("./Files/folder_open.svg");
-    background-repeat: no-repeat;
-    background-size: 5mm;
-    background-position: left top;
-    padding-left:7mm !important;
-    /* margin: 1mm 0 0 3mm; */
-    
-    padding: 1mm;
-    background-color: rgba(255, 255, 255, 0.192);
-}
-
+/* ------- write here-------- */
 main #ProjectBlock a{
-    text-decoration:solid;
+    text-decoration: none;
+}
+main #ProjectBlock ul{
+     padding-left: 205px;
+     font-size: .8rem;
+}
+main #ProjectBlock ul li{
+    background-color: rgba(245, 245, 245, 0.2);
+    padding: 5px 12px;
+    text-align: justify;
+    border-radius: 3px;
 }
 
 main > div{
@@ -268,22 +253,22 @@ main{
 }
 
 /* costom buttes start*/
-ul.custom-bullet {
+main #ProjectBlock ul.custom-bullet {
     list-style : none;
     padding-left: 3mm;
 }
 
-ul.custom-bullet li{
+main #ProjectBlock ul.custom-bullet li{
     position: relative;
     padding-left: 25px;
     margin:4px;
 }
 
-ul.custom-bullet li::before{
-    content: '';
+main #ProjectBlock ul.custom-bullet li::before{
+    content: ' 📂 ';
     position: absolute;
     left:0;
-    top: 7px;
+    top: 0px;
     width: 14px;
     height:14px;
     background-size: contain;
@@ -314,9 +299,7 @@ ul.custom-bullet li::before{
 .sql-icon{
      background-image: url('./Files/database.svg');
  }
-.folder-icon{
-    background-image: url('./Files/folder_open.svg');
-}
+
 /* Content Block Styling End */
 .flexMe{
     display:flex;
