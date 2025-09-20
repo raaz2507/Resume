@@ -9,21 +9,26 @@
     <meta property="og:description" content="Resume of Raj Kamal Aggrawal | Fresher | MCA Student | Skills: C, Python, Java, SQL, HTML, CSS, JavaScript. Projects include Transliteration Web App, Numerology Calculator, Java Input Handler, Calendar System, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://raaz2507.github.io/Resume/">
-    <meta property="og:image" content="https://raaz2507.github.io/Resume/Files/resuemQR.svg"> 
+    <meta property="og:image" content="https://raaz2507.github.io/Resume/Files/resuemQR.png"> 
 
     <!-- Twitter Card (for better preview on Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Raj Kamal Aggrawal - Fresher Resume & Portfolio">
     <meta name="twitter:description" content="Passionate about programming & technology. Skilled in Python, Java, C, SQL, HTML, CSS, JavaScript. Explore my resume and projects here.">
-    <meta name="twitter:image" content="https://raaz2507.github.io/Resume/Files/resuemQR.svg">
+    <meta name="twitter:image" content="https://raaz2507.github.io/Resume/Files/resuemQR.png">
 
     
     <title>Resume</title>
-    <link rel="icon" type="image/png" href="./Files/cv.png">
+    <!-- <link rel="icon" type="image/png" href="./Files/cv.png"> -->
+    <link rel="icon" href="data:image/svg+xml,
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+            <text y='.9em' font-size='90'>📑</text>
+        </svg>">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <button onclick="window.print()">Print as PDF</button>
+    <button onclick="window.print()" id="printBtn">🖨 Print</button>
+
     <div id="page">
         <header class="">
             <p id="name">Raj kamal Aggrawal</p>
@@ -60,8 +65,10 @@
                             <li class="python-icon">python</li>
                             <li class="html-icon">HTML, CSS</li>
                             <li class="js-icon">JavaScript(vanila)</li>
-                            <li class="java-icon">java</li>  
+                            <li class="java-icon">java</li> 
                         </ul>
+                        <p class="sub-heading">Framework</p>
+                        <ul class="custom-bullet"><li class="django-icon">&nbsp;</li></ul>
                     </li>
                     <li>
                         <p class="sub-heading">Database</p>
@@ -112,6 +119,8 @@
                     <li>B.A.(Poltical Sci. Hons)[Delhi University]</li>
                     <li>Office Assisant (Microsoft Office)</li>
                         <ul><li>Learnt Advance Microsoft Office</li></ul>
+                    <li>Full Stack Web Development</li>
+                        <ul><li>FrontEnd: HTML, CSS, javascript, Backend:Django , version Control:  GitHub</li></ul>
                     <li>Diploma: Post-Graduate Diploma in Computer Application (PGDCA) | IGNOU</li>
                         <ul>
                             <li>Learnt C,Python and Java Language</li>
@@ -130,18 +139,23 @@
             <div id="ProjectBlock">
                 <h4 class="heading">projects</h4>
                 <ul class="custom-bullet">
-                    <li class="folder-icon">
+                    <li>
+                        <p>
+                            <span class="projectTitle">Activity Tracker: </span>
+                            Built an Activity Tracker in Django with user authentication, activity logging, and interactive productivity visualizations using Chart.js.
+                            <a href="https://activitytracker-django.onrender.com/">[ Project Link ]</a>
+                        </p>
+                    </li>
+                    <li >
                         <p><span class="projectTitle">English2Hindi-Transliteration:</span> Built a responsive English to Hindi Transliteration Web App using HTML, CSS, and JavaScript. Added features like text conversion, copy-paste, font resizing, and JSON-based word storage for better user experience. <a href="https://raaz2507.github.io/English2Hindi-Transliteration/"> [ProJect Link]</a></p>
                     </li>
                     <li> 
-                        <p><span class="projectTitle">अंक ज्योतिष कैलकुलेटर: </span>This project is a Numerology Calculator that calculates the Name Number (नामांक), Birth Number (मूलांक), and Destiny Number (भाग्यांक) based on the user's name and date of birth. <a href="https://raaz2507.github.io/Horoscope/">[Project Link]</a></p>
+                        <p ><span class="projectTitle" >अंक ज्योतिष कैलकुलेटर: </span>This project is a Numerology Calculator that calculates the Name Number (नामांक), Birth Number (मूलांक), and Destiny Number (भाग्यांक) based on the user's name and date of birth. <a href="https://raaz2507.github.io/Horoscope/">[Project Link]</a></p>
                     </li>
                     <li>
-                        <p><span class="projectTitle">Custom Input Handler in Java:</span> This project aims to create a custom input handling system for various data types (strings, integers, floats, etc.) in Java, providing methods for reading and processing user input from the console  for solving problem of buffer input. <a href="https://github.com/raaz2507/javaInput-Scaner-Class"><br>[ Project Link ]</a></p>
+                        <p><span class="projectTitle">Custom Input Handler in Java:</span> This project aims to create a custom input handling system for various data types (strings, integers, floats, etc.) in Java, providing methods for reading and processing user input from the console  for solving problem of buffer input. <a href="https://github.com/raaz2507/javaInput-Scaner-Class">[ Project Link ]</a></p>
                     </li>
-                    <li>
-                        <p><span class="projectTitle">#1600 Year Calendar in OOP:</span> Developed a Python calendar system supporting 1600 years, featuring leap year calculations, date validation, and custom exceptions for invalid inputs.Utilized flexible input handling for numerical and textual month names, and calculated the day of the week for any date,all within an object-oriented framework. <a href="https://github.com/raaz2507/CheckDate"><br>[ Project Link ]</a></p>
-                    </li>
+                    
                      <li>
                         <p><span class="projectTitle">Grosey Site: </span> A Basic grosery Site like blikit or zepto in Ghibli art look. <a href="https://raaz2507.github.io/GrocerySite/"><br>[ Project Link ]</a></p>
                     </li>

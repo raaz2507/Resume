@@ -20,6 +20,18 @@ body{
     background-color:rgb(255, 228, 196);
 }
 
+#printBtn{
+    background-color: rgba(172, 255, 47, 0.6);
+    border:1px solid green;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: gray;
+    padding: 5px;
+    position: fixed;
+    bottom: 10%;
+    right:10%;
+}
+
 #page{
     width: var(--a4width);
     height: var(--a4height);
@@ -31,7 +43,7 @@ body{
 #page{
     display:grid;
     grid-template-columns: 35% auto;
-    grid-template-rows: 9% auto;
+    grid-template-rows: 20mm auto;
     grid-template-areas: "header header"
                          "aside conBlock";
     gap:2mm;
@@ -45,17 +57,17 @@ header{
     /* flex-direction:column; */
     /* gap:3mm; */
     text-align: center;
-    padding: 2mm 0;
+    padding: 1mm 0;
     grid-area:header;
     background-color:rgba(255, 192, 203, 0.312);
 }
 
 #name{
-    font-size:11mm;
+    font-size:10mm;
     text-transform: uppercase;
 }
 #status{
-    font-size:7mm;
+    font-size:5mm;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -207,6 +219,7 @@ main #EduBlock ul {
     /* list-style-type:symbols("i"); */
     margin-left: 5mm;
     list-style-type:none;
+    font-size: 15px;
 }
 
 main #EduBlock ul ul {
@@ -223,6 +236,7 @@ main #EduBlock li{
 
 main #OthExpBlock li{
     margin-left:10mm;
+    font-size: 13px;
 }
 
 /* ------- write here-------- */
@@ -262,10 +276,11 @@ main #ProjectBlock ul.custom-bullet li{
     position: relative;
     padding-left: 25px;
     margin:4px;
+    line-height: 140%;
 }
 
 main #ProjectBlock ul.custom-bullet li::before{
-    content: ' 📂 ';
+    content: '📂  ';
     position: absolute;
     left:0;
     top: 0px;
@@ -273,8 +288,11 @@ main #ProjectBlock ul.custom-bullet li::before{
     height:14px;
     background-size: contain;
     background-repeat: no-repeat;
+    transform: translate(30%, 40%);
 }
-
+main #ProjectBlock .projectTitle{
+    font-weight: 700;
+}
 /* custom bullets end */
 /*constom icons*/
 .c-icon{
@@ -299,7 +317,10 @@ main #ProjectBlock ul.custom-bullet li::before{
 .sql-icon{
      background-image: url('./Files/database.svg');
  }
-
+.django-icon{
+    background-image: url('./Files/django-logo-negative.svg');
+    background-size: contain;
+}
 /* Content Block Styling End */
 .flexMe{
     display:flex;
@@ -322,11 +343,16 @@ main #ProjectBlock ul.custom-bullet li::before{
     #page {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        box-shadow: none;
+        border:1px solid black;
     }
     .no-print {
         display: none; /* कुछ एलिमेंट्स को प्रिंट में हटा सकते हैं */
     }
     @page{
         size: A4;
+    }
+    #printBtn {
+        display: none;
     }
 }
