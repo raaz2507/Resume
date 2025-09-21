@@ -16,9 +16,13 @@ html, body{
     box-sizing: border-box;
     /* border: 2px  solid red; */
 }
-body{
-    background-color:rgb(255, 228, 196);
+body {
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                      url('./Files/paper_bg.jpg');
+    /* background-size: cover; */
+    /* background-position: center; */
 }
+
 
 #printBtn{
     background-color: rgba(172, 255, 47, 0.6);
@@ -33,12 +37,14 @@ body{
 }
 
 #page{
+    background-color:rgba(255, 228, 196, 0.3);
     width: var(--a4width);
     height: var(--a4height);
     box-shadow: 1px 1px 13px 1px rgb(172, 153, 131);
     margin: 0mm auto;
     padding:5mm;
     border-radius: 10px;
+    backdrop-filter: blur(1px);
 }
 #page{
     display:grid;
@@ -77,9 +83,9 @@ aside{
     /* width:35%; */
     /* height:80%; */
     grid-area:aside;
-    background-color:rgba(255, 108, 108, 0.274);
+    background-color:rgba(255, 108, 108, 0.09);
     border-radius:5px;
-    padding: 1mm 2mm;
+    padding: 3mm 2mm 1mm 4mm;
 }
 aside .heading{
     text-transform:uppercase;
@@ -102,9 +108,8 @@ aside li{
     background-position: left top;
     text-transform: capitalize;
 }
-aside div{
-    /* margin-bottom:0mm !important; */
-}
+/* aside div{margin-bottom:0mm !important;} */
+
 aside #qrBlock{
     width:40mm;
     height:40mm;
@@ -144,7 +149,6 @@ aside #ContactInfoBlock #linkdin{
 }
 aside #ContactInfoBlock li{
     padding-left:5mm;
-
 }
 
 aside #skillInfoBlock li>ul li{
@@ -152,44 +156,39 @@ aside #skillInfoBlock li>ul li{
     color:rgb(44, 66, 0);
 }
 
-aside #skillInfoBlock #language li{
-    /* background-image: url('./Files/code.svg'); */
-    /* background-size:5mm; */
-}
-aside #skillInfoBlock #database li{
-   
-    /* background-size:4mm; */
-}
-aside #intrestBlock ul li{
-    /* list-style-image: url('./Files/bookmark.svg') */
-}
+/* aside #skillInfoBlock #language li{background-image: url('./Files/code.svg');background-size:5mm;} */
+/* aside #skillInfoBlock #database li{background-size:4mm;} */
+/* aside #intrestBlock ul li{list-style-image: url('./Files/bookmark.svg');} */
 
 aside #intrestBlock ul li{
     /* margin-top:3mm; */
     background-image: url('./Files/bookmark.svg');
     background-size: 3mm;
     padding-left:5mm;
+    font-size: .8rem;
 }
-aside #strengthBlock ul{
-    /* list-style-image: url('./Files/dumbbell.svg'); */
-}
+/* aside #strengthBlock ul{list-style-image: url('./Files/dumbbell.svg');} */
+
 aside #strengthBlock li{
     background-image: url('./Files/dumbbell.svg');
     background-size:5mm;
     padding-left:7mm;
     background-position:left center;
     margin-top:2mm;
+    font-size: .8rem;
 }
 aside #achivementBlock ul li{
     background-image: url("./Files/trophy.svg");
     background-size: 5mm;
     background-position: left top;
     padding-left:7mm;
+    font-size: .8rem;
 } 
 aside #otherInfoBlock ul li{
     margin: 1mm 0;
-   
+    font-size: .8rem;
 }
+
 aside div{
     margin: 1mm auto;
 }
@@ -201,7 +200,9 @@ main{
     /* height:70%; */
     grid-area:conBlock;
     padding:1mm 3mm;
+    background-color: rgba(0, 128, 0, 0.09);
 }
+
 main .heading{
     text-transform:uppercase;
     margin:2mm 0 0mm 0;
@@ -215,86 +216,77 @@ main #profileBlock p{
 }
 
 /* Main list styling */
-main #EduBlock ul {
-    /* list-style-type:symbols("i"); */
-    margin-left: 5mm;
-    list-style-type:none;
+main #EduBlock > ul {
     font-size: 15px;
 }
 
-main #EduBlock ul ul {
-    /* list-style-type: circle; Nested list में हल्के बुलेट */
-}
-
-main #EduBlock li{
-    background-image: url('./Files/graduationCap.svg');
-    background-repeat:no-repeat;
-    background-size: 5mm;
-    padding-left: 6mm;
+main #EduBlock > ul >ul{
+    list-style-type:disc;
+    padding-left: 10mm;
     margin-bottom:2mm;
 }
 
-main #OthExpBlock li{
+main #OthExpBlock > ul li{
     margin-left:10mm;
     font-size: 13px;
 }
 
-/* ------- write here-------- */
+/* ------- Project Block Start-------- */
+main #ProjectBlock .projectTitle{
+    font-weight: 700;
+}
 main #ProjectBlock a{
     text-decoration: none;
 }
 main #ProjectBlock ul{
-     padding-left: 205px;
-     font-size: .8rem;
+    font-size: .8rem;
+    padding-left: 0;
 }
-main #ProjectBlock ul li{
+main #ProjectBlock > ul > li{
     background-color: rgba(245, 245, 245, 0.2);
     padding: 5px 12px;
     text-align: justify;
     border-radius: 3px;
 }
 
-main > div{
-    /* background-color:rgba(255, 114, 114, 0.25); */
-    /* box-shadow: 1px 1px 3px 2px rgba(255, 114, 114, 0.144); */
-    /* margin-bottom:2mm; */
-    padding:1mm 1mm;
-    border-radius: 5px;
-}
+/* ------- Project Block End -------- */
 
-main{
-    background-color: rgba(0, 128, 0, 0.291);
-}
 
-/* costom buttes start*/
-main #ProjectBlock ul.custom-bullet {
+/* -------- Costom Buttes Start -------- */
+ul.custom-bullet {
     list-style : none;
-    padding-left: 3mm;
 }
 
-main #ProjectBlock ul.custom-bullet li{
+ul.custom-bullet > li{
     position: relative;
-    padding-left: 25px;
+    padding-left: 25px !important;
     margin:4px;
     line-height: 140%;
 }
 
-main #ProjectBlock ul.custom-bullet li::before{
-    content: '📂  ';
+ul.custom-bullet > li::before{
+    content: '';
     position: absolute;
-    left:0;
+    left:13px;
     top: 0px;
     width: 14px;
     height:14px;
     background-size: contain;
     background-repeat: no-repeat;
-    transform: translate(30%, 40%);
+    /* transform: translate(-70%, 40%); */
 }
-main #ProjectBlock .projectTitle{
-    font-weight: 700;
-}
-/* custom bullets end */
+
+/*-------------- custom bullets end ----------*/
+
 /*constom icons*/
+main #ProjectBlock > ul > li::before{
+    content: '📂';
+    transform: translate(-70%, 40%);
+}
+main #EduBlock > ul > li::before{
+    content: '🎓';
+    transform: translate(-70%, 0%);
+}
 .c-icon{
     background-image: url('./Files/c.svg');
 }
