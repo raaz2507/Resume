@@ -84,6 +84,7 @@ aside{
     /* height:80%; */
     grid-area:aside;
     background-color:rgba(255, 108, 108, 0.09);
+    /* background-color:rgba(135, 207, 235, 0.517); */
     border-radius:5px;
     padding: 3mm 2mm 1mm 4mm;
 }
@@ -187,11 +188,14 @@ main{
     grid-area:conBlock;
     padding:1mm 3mm;
     background-color: rgba(0, 128, 0, 0.09);
+    /* background-color: rgba(59, 59, 59, 0.09); */
 }
 
 main .heading{
     text-transform:uppercase;
     margin:3mm 0 2mm 0;
+    font-size: 1rem;
+    color: rgb(0, 0, 89);
 }
 
 main #profileBlock p{
@@ -203,6 +207,7 @@ main #profileBlock p{
 
 /* Main list styling */
 main #EduBlock > ul {
+    margin-left: 1rem;
     font-size: 15px;
 }
 main #EduBlock > ul >li{
@@ -222,6 +227,10 @@ main #OthExpBlock > ul li{
 }
 
 /* ------- Project Block Start-------- */
+main #ProjectBlock > ul {
+    margin-left: .5rem;
+
+}
 main #ProjectBlock .projectTitle{
     font-weight: 700;
 }
@@ -281,13 +290,14 @@ ul.timeline{
 ul.timeline::before{
     position: absolute;
     background-position: center;
-    /* top:5px; */
-    left:1.5%;
+    top:0px;
+    left:0%;
     /* bottom: 0; */
     content: '';
     width:3px;
     height: 98%;
     background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 ul.timeline> li::before{
     content: '';
@@ -299,6 +309,7 @@ ul.timeline> li::before{
     height: 1.3rem;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 /*-------------- custom bullets end ----------*/
 
@@ -375,11 +386,11 @@ aside #strengthBlock > ul.custom-bullet>li::before{
 
 aside #achievementBlock > ul.custom-bullet>li::before {
     content: '🏆';
-    transform: translate(-100%, 30%);
+    transform: translate(-100%, 0%);
 }
 main #EduBlock > ul.custom-bullet > li::before{
     content: '🎓';
-    transform: translate(-70%, 0%);
+    transform: translate(-100%, 0%);
 }
 main #ProjectBlock > ul.custom-bullet > li::before{
     content: '📂';
