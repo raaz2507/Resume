@@ -41,7 +41,7 @@ body {
     width: var(--a4width);
     height: var(--a4height);
     box-shadow: 1px 1px 13px 1px rgb(172, 153, 131);
-    margin: 0mm auto;
+    margin: 5mm auto;
     padding:5mm;
     border-radius: 10px;
     backdrop-filter: blur(1px);
@@ -68,11 +68,11 @@ header{
     background-color:rgba(255, 192, 203, 0.312);
 }
 
-#name{
+header #name{
     font-size:10mm;
     text-transform: uppercase;
 }
-#status{
+header #status{
     font-size:5mm;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
@@ -103,11 +103,11 @@ aside ul{
     /* list-style-image: url("./Files/doc.svg") !important; */
     padding-left: 3mm;
 }
-aside li{
+/* aside ul li{
     background-repeat: no-repeat;
     background-position: left top;
     text-transform: capitalize;
-}
+} */
 /* aside div{margin-bottom:0mm !important;} */
 
 aside #qrBlock{
@@ -118,69 +118,53 @@ aside #qrBlock{
     background-repeat: no-repeat;
     margin:1mm auto;
 }
-aside #ContactInfoBlock{
-    padding-top: 2mm;
-    padding-left: 3mm;
-}
-aside #ContactInfoBlock ul{
-    /* background-color: rgb(255, 135, 155); */
-    padding:0 2mm ;
-    margin: 2mm 0;
+aside #ContactInfoBlock{margin-top: 3mm;}
+/* aside #ContactInfoBlock ul{} */
+aside #ContactInfoBlock > ul > li{
+    line-height: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 3px;
     font-style: italic;
 }
 aside #ContactInfoBlock a{
     text-decoration: none;
 }
-aside #ContactInfoBlock #address {
-    /* list-style-image: url('./Files/location-arrow.svg'); */
-    background-image: url('./Files/location-arrow.svg');
-}
-aside #ContactInfoBlock #phNum {
-    background-image: url('./Files/phone.svg');
-}
-aside #ContactInfoBlock #Email{
-    background-image: url('./Files/email.svg');
-}
-aside #ContactInfoBlock #github{
-    background-image: url('./Files/github.svg');
-}
-aside #ContactInfoBlock #linkdin{
-    background-image: url('./Files/linkdin.svg');
-}
-aside #ContactInfoBlock li{
+/* aside #ContactInfoBlock #address {list-style-image: url('./Files/location-arrow.svg'); background-image: url('./Files/location-arrow.svg');} */
+/* aside #ContactInfoBlock #phNum { background-image: url('./Files/phone.svg');} */
+/* aside #ContactInfoBlock #Email{ background-image: url('./Files/email.svg');} */
+/* aside #ContactInfoBlock #github{ background-image: url('./Files/github-octocat.svg');}
+aside #ContactInfoBlock #linkdin{ background-image: url('./Files/linkedin.svg');} */
+aside #ContactInfoBlock > ul > li{
     padding-left:5mm;
 }
 
-aside #skillInfoBlock li>ul li{
+aside #skillInfoBlock li>ul > li{
     padding-left:7mm;
     color:rgb(44, 66, 0);
 }
 
-/* aside #skillInfoBlock #language li{background-image: url('./Files/code.svg');background-size:5mm;} */
-/* aside #skillInfoBlock #database li{background-size:4mm;} */
+aside #skillInfoBlock #language li{
+    line-height: 1rem;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+aside #skillInfoBlock #database li{
+    line-height: 1rem;
+    font-size: 0.8rem;
+}
 /* aside #intrestBlock ul li{list-style-image: url('./Files/bookmark.svg');} */
 
 aside #intrestBlock ul li{
-    /* margin-top:3mm; */
-    background-image: url('./Files/bookmark.svg');
-    background-size: 3mm;
-    padding-left:5mm;
+    line-height: 1rem;
     font-size: .8rem;
 }
 /* aside #strengthBlock ul{list-style-image: url('./Files/dumbbell.svg');} */
 
 aside #strengthBlock li{
-    background-image: url('./Files/dumbbell.svg');
-    background-size:5mm;
-    padding-left:7mm;
-    background-position:left center;
-    margin-top:2mm;
+    line-height: 1rem;
     font-size: .8rem;
 }
 aside #achivementBlock ul li{
-    background-image: url("./Files/trophy.svg");
-    background-size: 5mm;
-    background-position: left top;
     padding-left:7mm;
     font-size: .8rem;
 } 
@@ -205,7 +189,7 @@ main{
 
 main .heading{
     text-transform:uppercase;
-    margin:2mm 0 0mm 0;
+    margin:3mm 0 2mm 0;
 }
 
 main #profileBlock p{
@@ -219,7 +203,11 @@ main #profileBlock p{
 main #EduBlock > ul {
     font-size: 15px;
 }
-
+main #EduBlock > ul >li{
+    background-color: rgba(255, 249, 233, 0.8);
+    margin-top: 2mm;
+    border-radius: 10px;
+}
 main #EduBlock > ul >ul{
     list-style-type:disc;
     padding-left: 10mm;
@@ -243,10 +231,12 @@ main #ProjectBlock ul{
     padding-left: 0;
 }
 main #ProjectBlock > ul > li{
-    background-color: rgba(245, 245, 245, 0.2);
+    background-color: rgba(245, 245, 245, 0.7);
+    margin-bottom: 4px;
     padding: 5px 12px;
     text-align: justify;
     border-radius: 3px;
+    border-left: 3px solid rgba(128, 128, 128, 0.493);
 }
 
 /* ------- Project Block End -------- */
@@ -260,8 +250,11 @@ ul.custom-bullet {
 ul.custom-bullet > li{
     position: relative;
     padding-left: 25px !important;
-    margin:4px;
+    /* margin:0 4px; */
     line-height: 140%;
+    background-size: contain;
+    /* background-position: center; */
+     /* background-size: 15px 15px; */
 }
 
 ul.custom-bullet > li::before{
@@ -275,44 +268,113 @@ ul.custom-bullet > li::before{
     background-repeat: no-repeat;
     /* transform: translate(-70%, 40%); */
 }
-
+ul.timeline{
+    position: relative;
+}
+ul.timeline::before{
+    position: absolute;
+    background-position: center;
+    /* top:5px; */
+    left:1.5%;
+    /* bottom: 0; */
+    content: '';
+    width:3px;
+    height: 98%;
+    background-color: white;
+}
+ul.timeline> li::before{
+    content: '';
+    position: absolute;
+    background-position: center center;
+    /* top:0; */
+    /* left:1.1rem; */
+    width:1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
 /*-------------- custom bullets end ----------*/
 
-/*constom icons*/
-main #ProjectBlock > ul > li::before{
-    content: '📂';
-    transform: translate(-70%, 40%);
+/*----- constom icons------*/
+aside #ContactInfoBlock ul#address >li::before {
+    content: '🏠';
+    transform: translate(-100%, 0%);
 }
-main #EduBlock > ul > li::before{
+aside #ContactInfoBlock ul#phNum >li::before {
+    content: '📞';
+    transform: translate(-100%, 0%);
+}
+aside #ContactInfoBlock ul#Email >li::before {
+    content: '📨';
+    transform: translate(-100%, 0%);
+}
+
+aside #ContactInfoBlock ul#github >li::before{
+    background-image: url('./Files/github-octocat.svg');
+    transform: translate(-100%, 50%);
+}
+aside #ContactInfoBlock ul#linkdin > li::before{ 
+    background-image: url('./Files/linkedin.svg');
+    transform: translate(-100%, 50%);
+}
+aside #skillInfoBlock ul.custom-bullet > li.c-icon::before{
+    background-image: url('./Files/c-1.svg');
+    transform: translate(-100%, 0%);
+}
+
+aside #skillInfoBlock ul.custom-bullet > li.python-icon::before{
+    background-image: url('./Files/python.svg');
+    transform: translate(-100%, 0%);
+}
+
+aside #skillInfoBlock ul.custom-bullet > li.html-icon::before{
+    background-image: url('./Files/css-3.svg');
+    transform: translate(-100%, 0%);
+}
+
+aside #skillInfoBlock ul.custom-bullet > li.js-icon::before{
+    background-image: url('./Files/javascript.svg');
+    transform: translate(-100%, 0%);
+}
+
+aside #skillInfoBlock ul.custom-bullet > li.java-icon::before{
+    background-image: url('./Files/java.svg');
+    transform: translate(-100%, 0%);
+}
+
+aside #skillInfoBlock ul.custom-bullet > li.sql-icon::before{
+    background-image: url('./Files/sql-reporting.svg');
+    transform: translate(-100%, 0%);
+}
+
+aside #skillInfoBlock ul.custom-bullet > li.django-icon::before{
+    background-image: url('./Files/django.svg');
+    transform: translate(-100%, 30%);
+}
+aside #intrestBlock > ul.custom-bullet>li::before {
+    content: '🔖';
+    transform: translate(-100%, 0%);
+}
+
+aside #strengthBlock > ul.custom-bullet>li::before{
+    background-image: url('./Files/dumbbell.svg');
+    transform: translate(-100%, 0%);
+}
+
+aside #achivementBlock > ul.custom-bullet>li::before {
+    content: '🏆';
+    transform: translate(-100%, 30%);
+}
+main #EduBlock > ul.custom-bullet > li::before{
     content: '🎓';
     transform: translate(-70%, 0%);
 }
-.c-icon{
-    background-image: url('./Files/c.svg');
-}
-.python-icon {
-    background-image: url('./Files/python.svg');
+main #ProjectBlock > ul.custom-bullet > li::before{
+    content: '📂';
+    transform: translate(-70%, 40%);
 }
 
-.html-icon {
-    background-image: url('./Files/css3-alt.svg');
-}
 
-.js-icon{
-    background-image: url('./Files/js.svg');
-}
-
-.java-icon{
-    background-image: url('./Files/java.svg');
-}
-
-.sql-icon{
-     background-image: url('./Files/database.svg');
- }
-.django-icon{
-    background-image: url('./Files/django-logo-negative.svg');
-    background-size: contain;
-}
 /* Content Block Styling End */
 .flexMe{
     display:flex;
@@ -324,12 +386,12 @@ main #EduBlock > ul > li::before{
     font-weight: 800;
 }
 
-.listSyleSetting{
+/* .listSyleSetting{
     list-style-type:none;
     background-repeat: no-repeat;
     background-position: left center;
     background-size:5mm;
-}
+} */
 
 @media print {
     #page {
