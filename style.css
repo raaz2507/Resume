@@ -111,12 +111,13 @@ aside ul{
 /* aside div{margin-bottom:0mm !important;} */
 
 aside #qrBlock{
-    width:40mm;
-    height:40mm;
-    background-image: url('./Files/resuemQR.svg') !important;
-    background-size:40mm ;
+    display: block;
+    width:150px;
+    height:150px;
+    background-image: url('./Files/resuemQR.svg');
+    background-size:contain;
     background-repeat: no-repeat;
-    margin:1mm auto;
+    margin:0mm auto;
 }
 aside #ContactInfoBlock{margin-top: 3mm;}
 /* aside #ContactInfoBlock ul{} */
@@ -133,28 +134,29 @@ aside #ContactInfoBlock a{
 /* aside #ContactInfoBlock #phNum { background-image: url('./Files/phone.svg');} */
 /* aside #ContactInfoBlock #Email{ background-image: url('./Files/email.svg');} */
 /* aside #ContactInfoBlock #github{ background-image: url('./Files/github-octocat.svg');}
-aside #ContactInfoBlock #linkdin{ background-image: url('./Files/linkedin.svg');} */
+aside #ContactInfoBlock #linkedin{ background-image: url('./Files/linkedin.svg');} */
 aside #ContactInfoBlock > ul > li{
     padding-left:5mm;
 }
 
-aside #skillInfoBlock li>ul > li{
-    padding-left:7mm;
+aside #skillsInfoBlock .skill-group{
+    margin-left:3mm;
     color:rgb(44, 66, 0);
+    font-size: 1rem;
 }
 
-aside #skillInfoBlock #language li{
+aside #skillsInfoBlock #language li{
     line-height: 1rem;
     margin-bottom: 5px;
     font-size: 0.8rem;
 }
-aside #skillInfoBlock #database li{
+aside #skillsInfoBlock #database li{
     line-height: 1rem;
     font-size: 0.8rem;
 }
-/* aside #intrestBlock ul li{list-style-image: url('./Files/bookmark.svg');} */
+/* aside #interestBlock ul li{list-style-image: url('./Files/bookmark.svg');} */
 
-aside #intrestBlock ul li{
+aside #interestBlock ul li{
     line-height: 1rem;
     font-size: .8rem;
 }
@@ -164,7 +166,7 @@ aside #strengthBlock li{
     line-height: 1rem;
     font-size: .8rem;
 }
-aside #achivementBlock ul li{
+aside #achievementBlock ul li{
     padding-left:7mm;
     font-size: .8rem;
 } 
@@ -178,7 +180,7 @@ aside div{
 }
 /* Sidebar styling End */
 
-/* contant Block Styling Start */
+/* content Block Styling Start */
 main{
     /* width:60%; */
     /* height:70%; */
@@ -242,7 +244,7 @@ main #ProjectBlock > ul > li{
 /* ------- Project Block End -------- */
 
 
-/* -------- Costom Buttes Start -------- */
+/* -------- Custom Bullets Start -------- */
 ul.custom-bullet {
     list-style : none;
 }
@@ -256,7 +258,12 @@ ul.custom-bullet > li{
     /* background-position: center; */
      /* background-size: 15px 15px; */
 }
-
+/* .custom-bullet > li:hover {
+    background: #3498db;
+    color: white;
+    transform: scale(1.05);
+    cursor: default;
+} */
 ul.custom-bullet > li::before{
     content: '';
     position: absolute;
@@ -295,7 +302,7 @@ ul.timeline> li::before{
 }
 /*-------------- custom bullets end ----------*/
 
-/*----- constom icons------*/
+/*----- custom icons------*/
 aside #ContactInfoBlock ul#address >li::before {
     content: '🏠';
     transform: translate(-100%, 0%);
@@ -313,45 +320,50 @@ aside #ContactInfoBlock ul#github >li::before{
     background-image: url('./Files/github-octocat.svg');
     transform: translate(-100%, 50%);
 }
-aside #ContactInfoBlock ul#linkdin > li::before{ 
+aside #ContactInfoBlock ul#linkedin > li::before{ 
     background-image: url('./Files/linkedin.svg');
     transform: translate(-100%, 50%);
 }
-aside #skillInfoBlock ul.custom-bullet > li.c-icon::before{
+aside #skillsInfoBlock ul.custom-bullet > li.c-icon::before{
     background-image: url('./Files/c-1.svg');
     transform: translate(-100%, 0%);
 }
 
-aside #skillInfoBlock ul.custom-bullet > li.python-icon::before{
+aside #skillsInfoBlock ul.custom-bullet > li.python-icon::before{
     background-image: url('./Files/python.svg');
     transform: translate(-100%, 0%);
 }
 
-aside #skillInfoBlock ul.custom-bullet > li.html-icon::before{
+aside #skillsInfoBlock ul.custom-bullet > li.html-icon::before{
+    background-image: url('./Files/html-5.svg');
+    transform: translate(-100%, 0%);
+}
+
+aside #skillsInfoBlock ul.custom-bullet > li.css-icon::before{
     background-image: url('./Files/css-3.svg');
     transform: translate(-100%, 0%);
 }
 
-aside #skillInfoBlock ul.custom-bullet > li.js-icon::before{
+aside #skillsInfoBlock ul.custom-bullet > li.js-icon::before{
     background-image: url('./Files/javascript.svg');
     transform: translate(-100%, 0%);
 }
 
-aside #skillInfoBlock ul.custom-bullet > li.java-icon::before{
+aside #skillsInfoBlock ul.custom-bullet > li.java-icon::before{
     background-image: url('./Files/java.svg');
     transform: translate(-100%, 0%);
 }
 
-aside #skillInfoBlock ul.custom-bullet > li.sql-icon::before{
+aside #skillsInfoBlock ul.custom-bullet > li.sql-icon::before{
     background-image: url('./Files/sql-reporting.svg');
     transform: translate(-100%, 0%);
 }
 
-aside #skillInfoBlock ul.custom-bullet > li.django-icon::before{
+aside #skillsInfoBlock ul.custom-bullet > li.django-icon::before{
     background-image: url('./Files/django.svg');
     transform: translate(-100%, 30%);
 }
-aside #intrestBlock > ul.custom-bullet>li::before {
+aside #interestBlock > ul.custom-bullet>li::before {
     content: '🔖';
     transform: translate(-100%, 0%);
 }
@@ -361,7 +373,7 @@ aside #strengthBlock > ul.custom-bullet>li::before{
     transform: translate(-100%, 0%);
 }
 
-aside #achivementBlock > ul.custom-bullet>li::before {
+aside #achievementBlock > ul.custom-bullet>li::before {
     content: '🏆';
     transform: translate(-100%, 30%);
 }
