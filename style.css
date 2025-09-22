@@ -143,18 +143,18 @@ aside #ContactInfoBlock > ul > li{
 aside #skillsInfoBlock .skill-group{
     margin-left:3mm;
     color:rgb(44, 66, 0);
+    
+}
+aside #skillsInfoBlock .skill-group .sub-heading{
     font-size: 1rem;
 }
 
-aside #skillsInfoBlock #language li{
+aside #skillsInfoBlock ul li{
     line-height: 1rem;
     margin-bottom: 5px;
     font-size: 0.8rem;
 }
-aside #skillsInfoBlock #database li{
-    line-height: 1rem;
-    font-size: 0.8rem;
-}
+
 /* aside #interestBlock ul li{list-style-image: url('./Files/bookmark.svg');} */
 
 aside #interestBlock ul li{
@@ -282,7 +282,7 @@ ul.custom-bullet > li::before{
     height:14px;
     background-size: contain;
     background-repeat: no-repeat;
-    /* transform: translate(-70%, 40%); */
+    transform: translate(-100%, 0%);
 }
 ul.timeline{
     position: relative;
@@ -316,15 +316,15 @@ ul.timeline> li::before{
 /*----- custom icons------*/
 aside #ContactInfoBlock ul#address >li::before {
     content: '🏠';
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 aside #ContactInfoBlock ul#phNum >li::before {
     content: '📞';
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 aside #ContactInfoBlock ul#Email >li::before {
     content: '📨';
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #ContactInfoBlock ul#github >li::before{
@@ -337,64 +337,65 @@ aside #ContactInfoBlock ul#linkedin > li::before{
 }
 aside #skillsInfoBlock ul.custom-bullet > li.c-icon::before{
     background-image: url('./Files/c-1.svg');
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #skillsInfoBlock ul.custom-bullet > li.python-icon::before{
     background-image: url('./Files/python.svg');
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #skillsInfoBlock ul.custom-bullet > li.html-icon::before{
     background-image: url('./Files/html-5.svg');
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #skillsInfoBlock ul.custom-bullet > li.css-icon::before{
     background-image: url('./Files/css-3.svg');
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #skillsInfoBlock ul.custom-bullet > li.js-icon::before{
     background-image: url('./Files/javascript.svg');
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #skillsInfoBlock ul.custom-bullet > li.java-icon::before{
     background-image: url('./Files/java.svg');
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #skillsInfoBlock ul.custom-bullet > li.sql-icon::before{
     background-image: url('./Files/sql-reporting.svg');
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #skillsInfoBlock ul.custom-bullet > li.django-icon::before{
     background-image: url('./Files/django.svg');
-    transform: translate(-100%, 30%);
+    /* transform: translate(-100%, 0%); */
 }
 aside #interestBlock > ul.custom-bullet>li::before {
     content: '🔖';
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #strengthBlock > ul.custom-bullet>li::before{
     background-image: url('./Files/dumbbell.svg');
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 
 aside #achievementBlock > ul.custom-bullet>li::before {
     content: '🏆';
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 main #EduBlock > ul.custom-bullet > li::before{
     content: '🎓';
-    transform: translate(-100%, 0%);
+    /* transform: translate(-100%, 0%); */
 }
 main #ProjectBlock > ul.custom-bullet > li::before{
     content: '📂';
-    transform: translate(-70%, 40%);
+    transform: translate(-100%, 50%);
+    margin-left: 5px;
 }
 
 
