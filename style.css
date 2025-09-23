@@ -339,6 +339,7 @@ main #ProjectBlock > ul {
 
 }
 main #ProjectBlock .projectTitle{
+    display: inline;
     font-weight: 700;
 }
 main #ProjectBlock a{
