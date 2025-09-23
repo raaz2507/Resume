@@ -24,7 +24,7 @@ body {
 }
 
 
-#printBtn{
+/* #printBtn{
     background-color: rgba(172, 255, 47, 0.6);
     border:1px solid green;
     border-radius: 5px;
@@ -34,6 +34,28 @@ body {
     position: fixed;
     bottom: 10%;
     right:10%;
+} */
+ #printBtn {
+  background-color: rgba(172,255,47,0.6);
+  border: 1px solid green;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  color: #333;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+/* only animate on hover */
+#printBtn:hover {
+   animation: float 0.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 #page{
@@ -74,16 +96,70 @@ header #name{
     transition: transform 20ms ease-in-out;
 }
 header #name:hover{
-    transform: scale(1.02);
-    color: goldenrod;
-    text-shadow: 0px 0px 2px rgba(0, 60, 138, 0.5);
+  font-weight: bold;
+  transform: scale(1.02);
+  /* color: #fff; */
+  background: linear-gradient(
+    90deg,
+    #ffffff 20%,
+    #f0f0f0 40%,
+    #ffffff 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: name_shine 2s linear infinite;
 }
-header #status{
+/* Font Shine / Shimmer Effect */
+@keyframes name_shine {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}
+header #status {
     font-size:5mm;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;  /* pseudo-element के लिए जरूरी */
+    cursor: pointer;
+    display: inline-block; /* relative + inline-block ताकि pseudo-element ठीक position में आए */
+}
+
+/* Gradient shine on hover */
+header #status:hover {
+    transform: scale(1.02);
+    font-weight: bold;
+    background: linear-gradient(90deg, #444 0%, #fff 50%, #444 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: status_shine 2s linear infinite;
+}
+
+
+/* Hover पर star animation */
+header #status:hover::after {
+    animation: starShine 2s linear infinite;
+}
+@keyframes status_shine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Star movement */
+@keyframes starShine {
+    0% { left: -1em; opacity: 0; transform: scale(0.5) rotate(0deg); }
+    50% { left: 50%; opacity: 1; transform: scale(1) rotate(360deg); }
+    100% { left: 110%; opacity: 0; transform: scale(0.5) rotate(720deg); }
 }
 /* header Styling end */
+
+/* Gradient animation */
+
+
 /* sidebar styling Start */
 aside{
     /* width:35%; */
@@ -467,12 +543,14 @@ main #ProjectBlock > ul.custom-bullet > li::before{
     background-size:5mm;
 } */
 
+
+
 @media print {
     #page {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
         box-shadow: none;
-        border:1px solid black;
+        /* border:1px solid black; */
         margin: 0mm auto;
     }
     .no-print {
