@@ -23,18 +23,6 @@ body {
     /* background-position: center; */
 }
 
-
-/* #printBtn{
-    background-color: rgba(172, 255, 47, 0.6);
-    border:1px solid green;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: gray;
-    padding: 5px;
-    position: fixed;
-    bottom: 10%;
-    right:10%;
-} */
  #printBtn {
   background-color: rgba(172,255,47,0.6);
   border: 1px solid green;
@@ -43,8 +31,8 @@ body {
   font-size: 1rem;
   color: #333;
   position: fixed;
-  bottom: 10%;
-  right: 10%;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
   transition: transform 120ms ease;
 }
@@ -78,12 +66,6 @@ body {
 }
 /* header Styling start */
 header{
-    /* width:100%; */
-    /* height:20%; */
-    /* border: 2px  solid red; */
-    /* flexSetting */
-    /* flex-direction:column; */
-    /* gap:3mm; */
     text-align: center;
     padding: 1mm 0;
     grid-area:header;
@@ -162,11 +144,8 @@ header #status:hover::after {
 
 /* sidebar styling Start */
 aside{
-    /* width:35%; */
-    /* height:80%; */
     grid-area:aside;
     background-color:rgba(255, 108, 108, 0.09);
-    /* background-color:rgba(135, 207, 235, 0.517); */
     border-radius:5px;
     padding: 3mm 2mm 1mm 4mm;
 }
@@ -180,12 +159,9 @@ aside .sub-heading{
     font-weight: 700;
     margin: 1mm 0 1mm 0;
 }
-
 aside ul{
-    list-style-type:none;
-    /* list-style-image: url("./Files/doc.svg") !important; */
     padding-left: 3mm;
-}
+} 
 aside ul li{
     transition: all 3ms ease;
 }
@@ -194,12 +170,6 @@ aside ul li:hover{
     font-weight: 700;
     text-shadow: 1px 1px 3px rgba(77, 255, 0, 0.394);
 }
-/* aside ul li{
-    background-repeat: no-repeat;
-    background-position: left top;
-    text-transform: capitalize;
-} */
-/* aside div{margin-bottom:0mm !important;} */
 
 aside #qrBlock{
     display: block;
@@ -216,30 +186,25 @@ aside #qrBlock:hover{
     z-index: 280;
 }
 aside #ContactInfoBlock{margin-top: 3mm;}
-/* aside #ContactInfoBlock ul{} */
+
 aside #ContactInfoBlock > ul > li{
     line-height: 1.5rem;
     font-size: 1rem;
     margin-bottom: 3px;
     font-style: italic;
 }
+
 aside #ContactInfoBlock a{
     text-decoration: none;
 }
-/* aside #ContactInfoBlock #address {list-style-image: url('./Files/location-arrow.svg'); background-image: url('./Files/location-arrow.svg');} */
-/* aside #ContactInfoBlock #phNum { background-image: url('./Files/phone.svg');} */
-/* aside #ContactInfoBlock #Email{ background-image: url('./Files/email.svg');} */
-/* aside #ContactInfoBlock #github{ background-image: url('./Files/github-octocat.svg');}
-aside #ContactInfoBlock #linkedin{ background-image: url('./Files/linkedin.svg');} */
-aside #ContactInfoBlock > ul > li{
-    padding-left:5mm;
-}
+
+/* aside #ContactInfoBlock > ul > li{padding-left:5mm;} */
 
 aside #skillsInfoBlock .skill-group{
     margin-left:3mm;
     color:rgb(44, 66, 0);
-    
 }
+
 aside #skillsInfoBlock .skill-group .sub-heading{
     font-size: 1rem;
 }
@@ -250,14 +215,11 @@ aside #skillsInfoBlock ul li{
     font-size: 0.8rem;
 }
 
-/* aside #interestBlock ul li{list-style-image: url('./Files/bookmark.svg');} */
-
 aside #interestBlock ul li{
     line-height: 1rem;
     font-size: .8rem;
     margin-bottom: 3px;
 }
-/* aside #strengthBlock ul{list-style-image: url('./Files/dumbbell.svg');} */
 
 aside #strengthBlock li{
     line-height: 1rem;
@@ -267,25 +229,22 @@ aside #strengthBlock li{
 aside #achievementBlock ul li{
     padding-left:7mm;
     font-size: .8rem;
+}
+aside #otherInfoBlock ul{
+    list-style-type:none;
 } 
 aside #otherInfoBlock ul li{
     margin: 1mm 0;
     font-size: .8rem;
 }
 
-aside div{
-    margin: 1mm auto;
-}
 /* Sidebar styling End */
 
 /* content Block Styling Start */
 main{
-    /* width:60%; */
-    /* height:70%; */
     grid-area:conBlock;
     padding:1mm 3mm;
     background-color: rgba(0, 128, 0, 0.09);
-    /* background-color: rgba(59, 59, 59, 0.09); */
 }
 
 main .heading{
@@ -316,7 +275,7 @@ main #EduBlock > ul> li .title{
     border-radius: 10px;
 }
 main #EduBlock > ul > li:hover {
-  background-color: rgb(255, 255, 255); /* हल्का सा effect */
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 3px 3px 10px -3px rgba(0, 0, 0, 0.3);
   transform: scale(1.02);
@@ -336,8 +295,8 @@ main #OthExpBlock > ul > li{
 /* ------- Project Block Start-------- */
 main #ProjectBlock > ul {
     margin-left: .5rem;
-
 }
+
 main #ProjectBlock .projectTitle{
     display: inline;
     font-weight: 700;
@@ -352,9 +311,9 @@ main #ProjectBlock ul{
 main #ProjectBlock > ul > li{
     background-color: rgba(245, 245, 245, 0.7);
     margin-bottom: 4px;
-    padding: 5px 12px;
+    padding-right: 10px;
     text-align: justify;
-    border-radius: 3px;
+    border-radius: 5px;
     border-left: 3px solid rgba(128, 128, 128, 0.493);
     transition: all 3ms ease;
 }
@@ -365,6 +324,11 @@ main #ProjectBlock > ul > li:hover{
 }
 /* ------- Project Block End -------- */
 
+/*------ to set ul- list in one line  start ------ */
+ul.in_one_line{ display: flex; flex-wrap: wrap; gap: 0px 10px;}
+ul.in_one_line li::after{ content: ',';} 
+ul.in_one_line > li{ padding-left: 17px !important;}
+/*------ to set ul- list in one line end ------ */
 
 /* -------- Custom Bullets Start -------- */
 ul.custom-bullet {
@@ -373,19 +337,10 @@ ul.custom-bullet {
 
 ul.custom-bullet > li{
     position: relative;
-    padding-left: 25px !important;
-    /* margin:0 4px; */
+    padding-left: 25px;
     line-height: 140%;
     background-size: contain;
-    /* background-position: center; */
-     /* background-size: 15px 15px; */
 }
-/* .custom-bullet > li:hover {
-    background: #3498db;
-    color: white;
-    transform: scale(1.05);
-    cursor: default;
-} */
 ul.custom-bullet > li::before{
     content: '';
     position: absolute;
@@ -440,7 +395,7 @@ ul.timeline > li:hover::before {
 }
 /*-------------- custom bullets end ----------*/
 
-/*----- custom icons------*/
+/*----- custom buttets icons start------*/
 aside #ContactInfoBlock ul#address >li::before {
     content: '🏠';
     /* transform: translate(-100%, 0%); */
@@ -521,46 +476,24 @@ main #EduBlock > ul.custom-bullet > li::before{
 }
 main #ProjectBlock > ul.custom-bullet > li::before{
     content: '📂';
-    transform: translate(-100%, 50%);
+    /* transform: translate(-100%, 0%); */
     margin-left: 5px;
+
 }
-
-
-/* Content Block Styling End */
-.flexMe{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.listTitle{
-    font-weight: 800;
-}
-
-/* .listSyleSetting{
-    list-style-type:none;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size:5mm;
-} */
-
-
+/*----- custom buttets icons end------*/
 
 @media print {
+    @page{ size: A4;}
     #page {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
         box-shadow: none;
+        background-color: white;
         /* border:1px solid black; */
         margin: 0mm auto;
     }
-    .no-print {
-        display: none; /* कुछ एलिमेंट्स को प्रिंट में हटा सकते हैं */
-    }
-    @page{
-        size: A4;
-    }
-    #printBtn {
-        display: none;
-    }
+    /* कुछ एलिमेंट्स को प्रिंट में हटा सकते हैं */
+    .no-print {display: none; }
+    
+    /* #printBtn { display: none;} */
 }
