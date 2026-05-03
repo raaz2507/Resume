@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100">
+    <style>
+        :root{
+            --main_color: #f16f23;
+            --sub_color: #f39b16;
+            --text_color: #fff8e5;
+        }
+    </style>
+    <polygon points="0,0 0,80 270,65 255,10" fill="var(--main_color)"/>
+    <polygon points="255,10 270,65 280,30" fill="var(--sub_color)"/>
+    <polygon points="280,30 270,65 330,15 " fill="var(--main_color)"/>
+    <polygon points="330,15 270,65 305,70" fill="var(--sub_color)"/>
+    <polygon points="330,15 305,70 340,60" fill="var(--main_color)"/>
+    <polygon points="330,15 340,60 450,90 410,35 450,5" fill="var(--sub_color)"/>
+    <text x="15" y="35" font-size="26" font-weight="500" fill="var(--text_color)" fill-opacity="1" letter-spacing="2">Khushi</text>
+    <text x="125" y="35" font-size="24" font-weight="700" fill="var(--text_color)" fill-opacity="0.9" letter-spacing="2">Rathore</text>
+    <text x="13" y="55" font-size="13" font-weight="500" fill="var(--text_color)" fill-opacity="0.7" letter-spacing="3">DESIGNER &amp; DOVELOPER</text>
+    <!--220,10--> <!---->
+    <!--340,60-->
+</svg>

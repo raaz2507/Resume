@@ -1,3 +1,5 @@
+@import url("./print_script_style.css");
+
 :root{
     --a4width:209mm;
     --a4height:295mm;
@@ -23,40 +25,24 @@ body {
     /* background-position: center; */
 }
 
- #printBtn {
-  background-color: rgba(172,255,47,0.6);
-  border: 1px solid green;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 1rem;
-  color: #333;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  transition: transform 120ms ease;
-}
-/* only animate on hover */
-#printBtn:hover {
-   animation: float 0.5s ease-in-out infinite;
-}
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
 }
 
-#page{
+.page{
     background-color:rgba(255, 228, 196, 0.3);
     width: var(--a4width);
     height: var(--a4height);
     box-shadow: 1px 1px 13px 1px rgb(172, 153, 131);
-    margin: 5mm auto;
+    margin: 2rem auto;
     padding:5mm;
     border-radius: 10px;
     backdrop-filter: blur(1px);
 }
-#page{
+.page{
     display:grid;
     grid-template-columns: 35% auto;
     grid-template-rows: 20mm auto;
@@ -179,10 +165,11 @@ aside #qrBlock{
     background-size:contain;
     background-repeat: no-repeat;
     margin:0mm auto;
-    transition: transform 30ms ease;
+    transition: transform 300ms ease;
+    cursor: zoom-in;
 }
 aside #qrBlock:hover{
-    transform: scale(1.5) translateX(0%);
+    transform: scale(1.2) translateX(0%);
     z-index: 280;
 }
 aside #ContactInfoBlock{margin-top: 3mm;}
@@ -480,20 +467,5 @@ main #ProjectBlock > ul.custom-bullet > li::before{
     margin-left: 5px;
 
 }
-/*----- custom buttets icons end------*/
 
-@media print {
-    @page{ size: A4;}
-    #page {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        box-shadow: none;
-        background-color: white;
-        /* border:1px solid black; */
-        margin: 0mm auto;
-    }
-    /* कुछ एलिमेंट्स को प्रिंट में हटा सकते हैं */
-    .no-print {display: none; }
-    
-    /* #printBtn { display: none;} */
-}
+

@@ -27,8 +27,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="page">
-        <button onclick="window.print()" id="printBtn" class="no-print">🖨 Print</button>
+    <div class="page">
         <header class="">
             <p id="name">Raj kamal Aggrawal</p>
             <p id="status">Fresher</p>
@@ -204,7 +203,10 @@
             </section>
         </main>
     </div>
+
+    
 </body>
+<script type="text/javascript" src="./print_script.js"></script>
 <script>
     const car_obj = document.querySelector('#profileBlock p');
     const org_text= car_obj.innerHTML;
@@ -215,5 +217,7 @@
         car_obj.innerHTML = str; 
     });
     car_obj.addEventListener('mouseout', ()=>{ car_obj.innerHTML = org_text; });
+
+
 </script>
 </html>
