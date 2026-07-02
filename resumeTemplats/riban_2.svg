@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" role="img" aria-labelledby="ribbonTitle ribbonDescription">
+    <title id="ribbonTitle">Khushi Rathore</title>
+    <desc id="ribbonDescription">Web Developer resume header</desc>
+    <style>
+        :root {
+            --main-color: #17324d;
+            --sub-color: #c96a2b;
+            --text-color: #ffffff;
+            --subtitle-color: #e9eef3;
+        }
+
+        .name {
+            font-family: Georgia, "Times New Roman", serif;
+            fill: var(--text-color);
+        }
+
+        .subtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            fill: var(--subtitle-color);
+        }
+    </style>
+
+    <polygon points="0,0 0,80 270,65 255,10" fill="var(--main-color)" />
+    <polygon points="255,10 270,65 280,30" fill="var(--sub-color)" />
+    <polygon points="280,30 270,65 330,15" fill="var(--main-color)" />
+    <polygon points="330,15 270,65 305,70" fill="var(--sub-color)" />
+    <polygon points="330,15 305,70 340,60" fill="var(--main-color)" />
+    <polygon points="330,15 340,60 450,90 410,35 450,5" fill="var(--sub-color)" />
+
+    <text class="name" x="15" y="36" font-size="27" font-weight="700" letter-spacing="1">Khushi</text>
+    <text class="name" x="112" y="36" font-size="25" font-weight="700" letter-spacing="1">Rathore</text>
+    <text class="subtitle" x="15" y="57" font-size="12" font-weight="600" letter-spacing="2">WEB DEVELOPER</text>
+</svg>

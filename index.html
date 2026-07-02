@@ -3,37 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- opne graph protocal start -->
+    <!-- Open Graph protocol start -->
      <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Raj Kamal Aggrawal | Resume & Portfolio">
     <meta property="og:description" content="Resume of Raj Kamal Aggrawal | Fresher | MCA Student | Skills: C, Python, Java, SQL, HTML, CSS, JavaScript. Projects include Transliteration Web App, Numerology Calculator, Java Input Handler, Calendar System, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://raaz2507.github.io/Resume/">
-    <meta property="og:image" content="https://raaz2507.github.io/Resume/Files/resuemQR.png"> 
+    <meta property="og:image" content="https://raaz2507.github.io/Resume/Files/resumeQR.png">
 
     <!-- Twitter Card (for better preview on Twitter/X) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Raj Kamal Aggrawal - Fresher Resume & Portfolio">
     <meta name="twitter:description" content="Passionate about programming & technology. Skilled in Python, Java, C, SQL, HTML, CSS, JavaScript. Explore my resume and projects here.">
-    <meta name="twitter:image" content="https://raaz2507.github.io/Resume/Files/resuemQR.png">
+    <meta name="twitter:image" content="https://raaz2507.github.io/Resume/Files/resumeQR.png">
 
     
     <title>Resume</title>
-    <!-- <link rel="icon" type="image/png" href="./Files/cv.png"> -->
-    <link rel="icon" href="data:image/svg+xml,
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-            <text y='.9em' font-size='90'>📑</text>
-        </svg>">
+    <link rel="icon" type="image/png" href="./Files/cv.png">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="page">
-        <header class="">
-            <p id="name">Raj kamal Aggrawal</p>
+        <header>
+            <p id="name">Raj Kamal Aggrawal</p>
             <p id="status">Fresher</p>
         </header>
         <aside id="infoBlock">
-            <canvas id="qrBlock" width="500" height="500" role="img"></canvas>
+            <canvas id="qrBlock" width="500" height="500" role="img" aria-label="QR code linking to the online resume">Your browser does not support the resume QR code.</canvas>
 
             <section id="ContactInfoBlock">
                 <h4 class="heading">Contact Information</h4>
@@ -41,17 +37,17 @@
                     <li>Nehru Vihar, Delhi</li>
                 </ul>
                 <ul id="phNum" class="custom-bullet">
-                    <li><a href="tel:+917210552015" target="_blank">+91-7210552015</a></li>
+                    <li><a href="tel:+917210552015">+91-7210552015</a></li>
                 </ul>
                 <ul id="Email" class="custom-bullet">
-                    <li><a href="mailto:raaz2507@gmail.com" target="_blank">raaz2507@gmail.com</a></li>
+                    <li><a href="mailto:raaz2507@gmail.com">raaz2507@gmail.com</a></li>
                 </ul>
                 <ul id="github" class="custom-bullet">
-                    <li><a href="https://github.com/raaz2507" target="_blank">@raaz2505</a></li>
+                    <li><a href="https://github.com/raaz2507" target="_blank" rel="noopener noreferrer">@raaz2507</a></li>
                 </ul>
                 <ul id="linkedin" class="custom-bullet">
-                    <!-- listSyleSetting -->
-                    <li><a href="https://www.linkedin.com/in/raj-aggrawal" target="_blank">@raj-aggrawal</a></li>
+                    <!-- listStyleSetting -->
+                    <li><a href="https://www.linkedin.com/in/raj-aggrawal" target="_blank" rel="noopener noreferrer">@raj-aggrawal</a></li>
                 </ul>
             </section>
              <!-- Skills Section -->
@@ -69,7 +65,7 @@
                     </ul>
                 </article>      
                 <article class="skill-group">
-                    <h3 class="sub-heading" id="frameword">Frameworks</h3>
+                    <h3 class="sub-heading" id="framework">Frameworks</h3>
                     <ul class="custom-bullet"><li class="django-icon">Django</li></ul>
                 </article>
                 <article class="skill-group">
@@ -133,24 +129,24 @@
             <section id="EduBlock">
                 <h3 class="heading">Education</h3>
                 <ul class="custom-bullet timeline">
-                    <li><p class="title">Diploma: Post-Graduate Diploma in Computer Application (PGDCA) | IGNOU</p>
+                    <li><p class="title">Diploma: Post-Graduate Diploma in Computer Applications (PGDCA) | IGNOU</p>
                         <ul>
-                            <li>Learned C,Python and Java Language</li>
-                            <li>Strong foundation in SQL, DBMS, Operating System</li>
+                            <li>Learned C, Python, and Java</li>
+                            <li>Strong foundation in SQL, DBMS, and Operating Systems</li>
                         </ul>
                     </li>
                     <li><p class="title">Full Stack Web Development [NIELIT]</p>
                         <ul>
                             <li>Frontend: HTML, CSS, JavaScript</li>
-                            <li>Backend:Django </li>
+                            <li>Backend: Django</li>
                             <li>Version Control:  GitHub</li>
                         </ul>
                     </li>
                     <li><p class="title">Office Assistant (Microsoft Office)</p>
                         <ul><li>Learned Advanced Microsoft Office</li></ul>
                     </li>
-                    <li><p class="title">B.A.(Political Science Hons)[Delhi University]</p></li>
-                    <li><p class="title">MCA [IGNOU] <i>-Pursuing</i> </p></li>
+                    <li><p class="title">B.A. (Political Science Hons.) [Delhi University]</p></li>
+                    <li><p class="title">MCA [IGNOU] <i>— Pursuing</i></p></li>
                 </ul>
             </section>
             <!-- <section id="OthExpBlock">
@@ -164,60 +160,63 @@
                 <h4 class="heading">Projects</h4>
                 <ul class="custom-bullet">
                     <li>
-                        <p>
+                        <div class="project-description">
                             <h4 class="projectTitle">Activity Tracker:</h4>
                             Built an Activity Tracker in Django with user authentication, activity logging, and interactive productivity visualizations using Chart.js.
-                            <a href="https://activitytracker-django.onrender.com/" target="_blank">[ Project Link ]</a>
-                        </p>
-                    </li>
-                    <li >
-                        <p>
-                            <h4 class="projectTitle">English to Hindi-Transliteration:</h4> 
-                            Built a responsive English to Hindi Transliteration Web App using HTML, CSS, and JavaScript. Added features like text conversion, copy-paste, font resizing, and JSON-based word storage for better user experience. 
-                            <a href="https://raaz2507.github.io/English2Hindi-Transliteration/" target="_blank"> [Project Link]</a>
-                        </p>
-                    </li>
-                    <li> 
-                        <p >
-                            <h4 class="projectTitle" >अंक ज्योतिष कैलकुलेटर: </h4>
-                            This project is a Numerology Calculator that calculates the Name Number (नामांक), Birth Number (मूलांक), and Destiny Number (भाग्यांक) based on the user's name and date of birth. 
-                            <a href="https://raaz2507.github.io/Horoscope/"  target="_blank">[Project Link]</a>
-                        </p>
+                            <a href="https://activitytracker-django.onrender.com/" target="_blank" rel="noopener noreferrer">[Project Link]</a>
+                        </div>
                     </li>
                     <li>
-                        <p>
+                        <div class="project-description">
+                            <h4 class="projectTitle">English-to-Hindi Transliteration:</h4>
+                            Built a responsive English to Hindi Transliteration Web App using HTML, CSS, and JavaScript. Added features like text conversion, copy-paste, font resizing, and JSON-based word storage for better user experience. 
+                            <a href="https://raaz2507.github.io/English2Hindi-Transliteration/" target="_blank" rel="noopener noreferrer">[Project Link]</a>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="project-description">
+                            <h4 class="projectTitle">अंक ज्योतिष कैलकुलेटर:</h4>
+                            This project is a Numerology Calculator that calculates the Name Number (नामांक), Birth Number (मूलांक), and Destiny Number (भाग्यांक) based on the user's name and date of birth. 
+                            <a href="https://raaz2507.github.io/Horoscope/" target="_blank" rel="noopener noreferrer">[Project Link]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project-description">
                             <h4 class="projectTitle">Custom Input Handler in Java:</h4> 
-                            This project aims to create a custom input handling system for various data types (strings, integers, floats, etc.) in Java, providing methods for reading and processing user input from the console  for solving problem of buffer input. 
-                            <a href="https://github.com/raaz2507/javaInput-Scanner-Class" target="_blank">[ Project Link ]</a>
-                        </p>
+                            This project creates a custom Java input-handling system for various data types, including strings, integers, and floats. It provides methods for reading and processing console input while handling input-buffer issues.
+                            <a href="https://github.com/raaz2507/javaInput-Scanner-Class" target="_blank" rel="noopener noreferrer">[Project Link]</a>
+                        </div>
                     </li>
                     
-                     <li>
-                        <p>
-                            <h4 class="projectTitle">Grocery Site: </h4> 
+                    <li>
+                        <div class="project-description">
+                            <h4 class="projectTitle">Grocery Site:</h4>
                             A web-based grocery store application built using HTML, CSS, JavaScript, and SQL. Features include product listing, add product functionality, and a structured database design with a clean, responsive UI.
-                            <a href="https://raaz2507.github.io/GrocerySite/"  target="_blank"><br>[ Project Link ]</a>
-                        </p>
+                            <a href="https://raaz2507.github.io/GrocerySite/" target="_blank" rel="noopener noreferrer"><br>[Project Link]</a>
+                        </div>
                     </li>
                 </ul>
             </section>
         </main>
     </div>
 
-    
+    <script src="./print_script.js"></script>
+    <script>
+        const car_obj = document.querySelector('#profileBlock p');
+        const org_text = car_obj.innerHTML;
+        const money = `💵💸🤑💰💲💶`;
+
+        car_obj.addEventListener('mouseover', () => {
+            let str = '';
+            for (let i = 0; i < 24; i++) {
+                str += money;
+            }
+            car_obj.innerHTML = str;
+        });
+
+        car_obj.addEventListener('mouseout', () => {
+            car_obj.innerHTML = org_text;
+        });
+    </script>
 </body>
-<script type="text/javascript" src="./print_script.js"></script>
-<script>
-    const car_obj = document.querySelector('#profileBlock p');
-    const org_text= car_obj.innerHTML;
-    const money= `💵💸🤑💰💲💶`;
-    car_obj.addEventListener('mouseover', ()=>{
-        let str =''
-        for (let i=0; i<24; i++){ str+= money;}
-        car_obj.innerHTML = str; 
-    });
-    car_obj.addEventListener('mouseout', ()=>{ car_obj.innerHTML = org_text; });
-
-
-</script>
 </html>

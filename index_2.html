@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ATS-friendly software developer resume of Raj Kamal Aggrawal">
+    <title>Raj Kamal Aggrawal | Software Developer Resume</title>
+    <style>
+        :root {
+            --text: #202124;
+            --muted: #4b5563;
+            --rule: #9ca3af;
+            --link: #174ea6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f3f4f6;
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            line-height: 1.42;
+        }
+
+        .resume {
+            width: min(210mm, 100%);
+            margin: 24px auto;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin-bottom: 24px;
+            padding: 18mm 16mm;
+            background: #fff;
+            box-shadow: 0 2px 16px rgb(0 0 0 / 10%);
+            break-after: page;
+        }
+
+        .page:last-child {
+            margin-bottom: 0;
+            break-after: auto;
+        }
+
+        .print-button {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 10;
+            padding: 11px 18px;
+            border: 0;
+            border-radius: 6px;
+            background: #174ea6;
+            color: #fff;
+            font: 700 10.5pt Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            box-shadow: 0 3px 12px rgb(0 0 0 / 22%);
+        }
+
+        .print-button:hover,
+        .print-button:focus-visible {
+            background: #123b7d;
+        }
+
+        header {
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 5px;
+            font-size: 24pt;
+            line-height: 1.15;
+            letter-spacing: 0.2px;
+        }
+
+        .headline {
+            margin: 0 0 7px;
+            color: var(--muted);
+            font-size: 12pt;
+            font-weight: 700;
+        }
+
+        address {
+            color: var(--muted);
+            font-style: normal;
+        }
+
+        address span:not(:last-child)::after {
+            content: " | ";
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        section {
+            margin-top: 17px;
+        }
+
+        h2 {
+            margin: 0 0 8px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid var(--rule);
+            font-size: 13pt;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 11.5pt;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ul {
+            margin: 5px 0 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 2px 0;
+        }
+
+        .skills p {
+            margin: 3px 0;
+        }
+
+        .entry {
+            margin-top: 11px;
+            break-inside: avoid;
+        }
+
+        .entry:first-of-type {
+            margin-top: 0;
+        }
+
+        .entry-heading {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 10pt;
+            white-space: nowrap;
+        }
+
+        .technology {
+            color: var(--muted);
+            font-size: 10.5pt;
+        }
+
+        @media (max-width: 650px) {
+            .resume {
+                width: 100%;
+                margin: 0;
+            }
+
+            .page {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 24px 18px;
+                box-shadow: none;
+            }
+
+            .entry-heading {
+                display: block;
+            }
+
+            .meta {
+                white-space: normal;
+            }
+
+            address span {
+                display: block;
+            }
+
+            address span::after {
+                content: "" !important;
+            }
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 13mm;
+            }
+
+            body {
+                background: #fff;
+                font-size: 10.5pt;
+            }
+
+            .resume {
+                width: auto;
+                margin: 0;
+                padding: 0;
+            }
+
+            .page {
+                width: auto;
+                min-height: calc(297mm - 26mm);
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                break-after: page;
+            }
+
+            .page:last-child {
+                break-after: auto;
+            }
+
+            .print-button {
+                display: none;
+            }
+
+            a {
+                color: inherit;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" type="button" onclick="window.print()" aria-label="Print resume or save it as a PDF">
+        Print / Save PDF
+    </button>
+    <main class="resume">
+      <div class="page">
+        <header>
+            <h1>Raj Kamal Aggrawal</h1>
+            <p class="headline">Entry-Level Software Developer | MCA Student</p>
+            <address aria-label="Contact information">
+                <span>Delhi, India</span>
+                <span><a href="tel:+917210552015">+91 72105 52015</a></span>
+                <span><a href="mailto:raaz2507@gmail.com">raaz2507@gmail.com</a></span>
+                <span><a href="https://github.com/raaz2507">github.com/raaz2507</a></span>
+                <span><a href="https://www.linkedin.com/in/raj-aggrawal">linkedin.com/in/raj-aggrawal</a></span>
+            </address>
+        </header>
+
+        <section aria-labelledby="summary-heading">
+            <h2 id="summary-heading">Professional Summary</h2>
+            <p>
+                Entry-level software developer and MCA student with a PGDCA and hands-on experience
+                building web applications using Python, Django, JavaScript, HTML, CSS, Java, and SQL.
+                Familiar with database management, data structures, user authentication, responsive
+                interfaces, version control, and application deployment.
+            </p>
+        </section>
+
+        <section class="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical Skills</h2>
+            <p><strong>Programming Languages:</strong> C, Java, Python, JavaScript</p>
+            <p><strong>Web Technologies:</strong> HTML5, CSS3, Django</p>
+            <p><strong>Databases:</strong> SQL, DBMS</p>
+            <p><strong>Tools and Platforms:</strong> Git, GitHub, Render, Microsoft Office</p>
+            <p><strong>Core Concepts:</strong> Data Structures, Operating Systems, Responsive Web Design</p>
+        </section>
+
+        <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+
+            <article class="entry">
+                <div class="entry-heading">
+                    <h3>Activity Tracker</h3>
+                    <a class="meta" href="https://activitytracker-django.onrender.com/">Live Application</a>
+                </div>
+                <p class="technology"><strong>Technologies:</strong> Python, Django, JavaScript, Chart.js</p>
+                <ul>
+                    <li>Developed a productivity application with user authentication and activity logging.</li>
+                    <li>Created interactive charts to help users review and understand their activity patterns.</li>
+                    <li>Deployed the complete web application on Render.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-heading">
+                    <h3>English-to-Hindi Transliteration</h3>
+                    <a class="meta" href="https://raaz2507.github.io/English2Hindi-Transliteration/">Live Application</a>
+                </div>
+                <p class="technology"><strong>Technologies:</strong> HTML5, CSS3, JavaScript, JSON</p>
+                <ul>
+                    <li>Built a responsive application that converts English text into Hindi transliteration.</li>
+                    <li>Implemented copy-paste controls, font resizing, and JSON-based word storage.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-heading">
+                    <h3>Numerology Calculator</h3>
+                    <a class="meta" href="https://raaz2507.github.io/Horoscope/">Live Application</a>
+                </div>
+                <p class="technology"><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+                <ul>
+                    <li>Created a browser-based calculator for name, birth, and destiny numbers.</li>
+                    <li>Processed a user's name and date of birth to generate numerology results.</li>
+                </ul>
+            </article>
+        </section>
+      </div>
+
+      <div class="page">
+        <section aria-labelledby="additional-projects-heading">
+            <h2 id="additional-projects-heading">Additional Projects</h2>
+
+            <article class="entry">
+                <div class="entry-heading">
+                    <h3>Custom Input Handler in Java</h3>
+                    <a class="meta" href="https://github.com/raaz2507/javaInput-Scanner-Class">GitHub Repository</a>
+                </div>
+                <p class="technology"><strong>Technologies:</strong> Java</p>
+                <ul>
+                    <li>Designed reusable methods for reading strings, integers, floats, and other console input.</li>
+                    <li>Handled common input-buffer issues to make console input more reliable.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-heading">
+                    <h3>Grocery Store Website</h3>
+                    <a class="meta" href="https://raaz2507.github.io/GrocerySite/">Live Application</a>
+                </div>
+                <p class="technology"><strong>Technologies:</strong> HTML5, CSS3, JavaScript, SQL</p>
+                <ul>
+                    <li>Built a responsive grocery interface with product listing and product-addition features.</li>
+                    <li>Designed a structured relational database model for grocery product data.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section aria-labelledby="education-heading">
+            <h2 id="education-heading">Education and Training</h2>
+
+            <article class="entry">
+                <div class="entry-heading">
+                    <h3>Master of Computer Applications (MCA)</h3>
+                    <span class="meta">Pursuing</span>
+                </div>
+                <p>Indira Gandhi National Open University (IGNOU)</p>
+            </article>
+
+            <article class="entry">
+                <h3>Post-Graduate Diploma in Computer Applications (PGDCA)</h3>
+                <p>Indira Gandhi National Open University (IGNOU)</p>
+                <p class="technology">Coursework: C, Java, Python, SQL, DBMS, Data Structures, Operating Systems</p>
+            </article>
+
+            <article class="entry">
+                <h3>Full Stack Web Development</h3>
+                <p>National Institute of Electronics and Information Technology (NIELIT)</p>
+                <p class="technology">Coursework: HTML, CSS, JavaScript, Django, GitHub</p>
+            </article>
+
+            <article class="entry">
+                <h3>Bachelor of Arts (Honours) in Political Science</h3>
+                <p>University of Delhi</p>
+            </article>
+
+            <article class="entry">
+                <h3>Office Assistant Training</h3>
+                <p class="technology">Advanced Microsoft Office</p>
+            </article>
+        </section>
+
+        <section aria-labelledby="achievements-heading">
+            <h2 id="achievements-heading">Achievements</h2>
+            <ul>
+                <li>Earned a certificate in a drawing competition.</li>
+            </ul>
+        </section>
+      </div>
+    </main>
+</body>
+</html>

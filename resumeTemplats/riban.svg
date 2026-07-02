@@ -14,7 +14,7 @@
     <polygon points="330,15 340,60 450,90 410,35 450,5" fill="var(--sub_color)"/>
     <text x="15" y="35" font-size="26" font-weight="500" fill="var(--text_color)" fill-opacity="1" letter-spacing="2">Khushi</text>
     <text x="125" y="35" font-size="24" font-weight="700" fill="var(--text_color)" fill-opacity="0.9" letter-spacing="2">Rathore</text>
-    <text x="13" y="55" font-size="13" font-weight="500" fill="var(--text_color)" fill-opacity="0.7" letter-spacing="3">DESIGNER &amp; DOVELOPER</text>
+    <text x="13" y="55" font-size="13" font-weight="500" fill="var(--text_color)" fill-opacity="0.7" letter-spacing="3">DESIGNER &amp; DEVELOPER</text>
     <!--220,10--> <!---->
     <!--340,60-->
 </svg>
