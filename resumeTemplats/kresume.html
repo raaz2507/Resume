@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-animation-speed="real">
 
 <head>
 	<meta charset="UTF-8" />
@@ -27,8 +27,23 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-	<div class="page">
+	<body>
+		<div class="animation-selector" role="radiogroup" aria-label="Animation speed">
+			<span class="animation-selector__title">Animation:</span>
+			<label>
+				<input type="radio" name="animation-speed" value="quick" />
+				<span>⚡ Quick</span>
+			</label>
+			<label>
+				<input type="radio" name="animation-speed" value="real" checked />
+				<span>🎯 Real</span>
+			</label>
+			<label>
+				<input type="radio" name="animation-speed" value="relax" />
+				<span>🌿 Relax</span>
+			</label>
+		</div>
+		<div class="page">
 		<header>
 			<section class="qr_container">
 				<img src="./qrcode.svg" alt="QR code" width="350" height="100" />
@@ -93,6 +108,7 @@
 				<h3 class="heading">Education</h3>
 				<section class="edu_list">
 					<article class="edu_item" role="list_item">
+						<div class="edu_content">
 						<h4 class="title_text">
 							Diploma in Computer Science & Engineering
 						</h4>
@@ -102,29 +118,36 @@
 						<p>
 							<strong class="item_title">Year: </strong><span>2024-2026</span>
 						</p>
+						</div>
 					</article>
 					<article class="edu_item" role="list_item">
+						<div class="edu_content">
 						<h4 class="title_text">Bachelor (B.Sc.)</h4>
 						<p><strong class="item_title">Board: </strong><span>UU</span></p>
 						<p>
 							<strong class="item_title">Year: </strong><span>2021-2026</span>
 						</p>
+						</div>
 					</article>
 					<article class="edu_item" role="list_item">
+						<div class="edu_content">
 						<h4 class="title_text">Intermediate (12th)</h4>
 						<p>
 							<strong class="item_title">Board: </strong><span>CBSE</span>
 						</p>
 						<p><strong class="item_title">Year: </strong><span>2021</span></p>
 						<p><strong>Percentage: </strong><span>71.5%</span></p>
+						</div>
 					</article>
 					<article class="edu_item" role="list_item">
+						<div class="edu_content">
 						<h4 class="title_text">High School (10th)</h4>
 						<p>
 							<strong class="item_title">Board: </strong><span>CBSE</span>
 						</p>
 						<p><strong class="item_title">Year: </strong><span>2019</span></p>
 						<p><strong>Percentage: </strong><span>79.17%</span></p>
+						</div>
 					</article>
 				</section>
 			</section>
@@ -153,19 +176,128 @@
 	<script>
 
 		const edu = document.querySelector(".edu_list");
+		const animationSpeedInputs = document.querySelectorAll('input[name="animation-speed"]');
+		const animationSpeedConfig = {
+			quick: { character: 8, comma: 40, period: 80 },
+			real: { character: 20, comma: 100, period: 200 },
+			relax: { character: 38, comma: 180, period: 350 },
+		};
 
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add("show-line");
-				}
+		const getAnimationSpeed = () => {
+			const selectedMode = document.querySelector('input[name="animation-speed"]:checked')?.value || "real";
+			return animationSpeedConfig[selectedMode];
+		};
+
+		animationSpeedInputs.forEach(input => {
+			input.addEventListener("change", () => {
+				document.documentElement.dataset.animationSpeed = input.value;
 			});
-		}, {
-			threshold: 0.2,
-			rootMargin: "0px 0px -50px 0px"
 		});
 
-		if (edu) observer.observe(edu);
+		const story = {
+			careerHeading: document.querySelector(".cariare_objetive .heading"),
+			careerContent: document.querySelector(".cariare_objetive p"),
+			workHeading: document.querySelector(".work_expriance .heading"),
+			workContent: document.querySelector(".work_expriance article"),
+			technicalHeading: document.querySelector(".technical_skills .heading"),
+			technicalItems: [...document.querySelectorAll(".technical_skills li")],
+			softHeading: document.querySelector(".soft_skills .heading"),
+			softItems: [...document.querySelectorAll(".soft_skills li")],
+			educationHeading: document.querySelector(".education > .heading"),
+			projectHeading: document.querySelector(".projects > .heading"),
+			projectTitle: document.querySelector(".project_item .title_text"),
+			projectDetails: [...document.querySelectorAll(".project_item p")],
+		};
+		const storyElements = [
+			story.careerHeading, story.careerContent,
+			story.workHeading, story.workContent,
+			story.technicalHeading, ...story.technicalItems,
+			story.softHeading, ...story.softItems,
+			story.educationHeading,
+			story.projectHeading, story.projectTitle, ...story.projectDetails,
+		].filter(Boolean);
+		const originalContent = new Map(storyElements.map(element => [element, {
+			html: element.innerHTML,
+			text: element.textContent.replace(/\s+/g, " ").trim(),
+		}]));
+		let skipStory = false;
+		let storyStarted = false;
+
+		const wait = milliseconds => new Promise(resolve => window.setTimeout(resolve, milliseconds));
+		const typeElement = async element => {
+			if (!element) return;
+			const original = originalContent.get(element);
+			element.style.minHeight = `${element.offsetHeight}px`;
+			element.classList.remove("story-hidden");
+			element.textContent = "";
+			element.classList.add("typing-active");
+
+			for (const character of original.text) {
+				if (skipStory) break;
+				element.textContent += character;
+				const speed = getAnimationSpeed();
+				const delay = character === "." ? speed.period : character === "," ? speed.comma : speed.character;
+				await wait(delay);
+			}
+
+			element.innerHTML = original.html;
+			element.classList.remove("typing-active");
+		};
+
+		const typeItems = async items => {
+			for (const item of items) await typeElement(item);
+		};
+
+		const completeStory = () => {
+			skipStory = true;
+			storyElements.forEach(element => {
+				const original = originalContent.get(element);
+				element.innerHTML = original.html;
+				element.classList.remove("story-hidden", "typing-active");
+			});
+			edu?.classList.add("show-line");
+		};
+
+		const runStory = async () => {
+			if (storyStarted) return;
+			storyStarted = true;
+
+			await typeElement(story.careerHeading);
+			await typeElement(story.careerContent);
+			await typeElement(story.workHeading);
+			await typeElement(story.workContent);
+			await typeElement(story.technicalHeading);
+			await typeItems(story.technicalItems);
+			await typeElement(story.softHeading);
+			await typeItems(story.softItems);
+			await typeElement(story.educationHeading);
+
+			edu?.classList.add("show-line");
+			const mode = document.documentElement.dataset.animationSpeed || "real";
+			const educationWait = mode === "quick" ? 950 : mode === "relax" ? 2900 : 1800;
+			if (!skipStory) await wait(educationWait);
+
+			await typeElement(story.projectHeading);
+			await typeElement(story.projectTitle);
+			await typeItems(story.projectDetails);
+		};
+
+		storyElements.forEach(element => element.classList.add("story-hidden"));
+
+		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+			completeStory();
+		} else {
+			const main = document.querySelector("main");
+			const storyObserver = new IntersectionObserver((entries, currentObserver) => {
+				if (entries.some(entry => entry.isIntersecting)) {
+					runStory();
+					currentObserver.disconnect();
+				}
+			}, { threshold: 0.1 });
+			if (main) storyObserver.observe(main);
+		}
+
+		window.addEventListener("beforeprint", completeStory);
 	</script>
 
 </body>
